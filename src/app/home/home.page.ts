@@ -4,7 +4,7 @@ import { Router, NavigationExtras } from '@angular/router';
 import { HttpClient, HttpParams} from '@angular/common/http';
 import { timeout } from 'rxjs/operators';
 
-import { GoogleAnalyticsService } from './../google-analytics.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -16,10 +16,25 @@ export class HomePage {
   accept=false;
   email = "";
   spinner=false;
-  lang='en';
+  lang='fr';
 
 
-  constructor(private router: Router, public mydata: DataService, private http: HttpClient,private googleAnalyticsService: GoogleAnalyticsService) {
+  constructor(
+    private router: Router, 
+    public mydata: DataService, 
+    private http: HttpClient,
+    private route: ActivatedRoute,
+  ) 
+  
+  {
+
+      this.route.queryParams.subscribe(params => {
+        if (params) {
+          this.mydata.switchLang(params.lang);
+        }
+      });
+
+      
 
     
   }
@@ -128,10 +143,11 @@ export class HomePage {
   }
 
   ionViewDidEnter() {
-    this.googleAnalyticsService.trackPagesHandler('home');
 
   }
   
- 
+  ngOnInit() {
+   
+  }
 
 }

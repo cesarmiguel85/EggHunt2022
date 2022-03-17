@@ -1,4 +1,4 @@
-//Type can be 
+//Type can be
 //  -  'separate' pour les images en vertical --> on peut mettre autant qu'on veut
 //  -  'horizontal' pour un defilement avec fleches horizontales --> on peut mettre autant qu'on veut
 //  -  'image360' pour le viseur 360 --> 1 seule image (car on ne peut pas scroller vers le bas (ça tourne l'image 360))
@@ -37,6 +37,7 @@ export const jsondata = [
     }
   ]
 },
+/*
 {
   area: "Barcelona: Sagrada Familia [Spain]",
   type: 'image360',
@@ -195,13 +196,18 @@ export const jsondata = [
       }]
 
     }
+    
   ]
+  
 }
+*/
 
 ];
 
 
 export const variables = {
+  doubleclickcoordinates:true, //mettre true pour activer l'affichage des coordonnees sur image360 avec double click
+
   //Si pas de base de données (false), toutes lesoptions sur l'app seront desactivée
   with_db: false,
   dbname: "",
@@ -214,6 +220,8 @@ export const variables = {
 }
 
 export const messages_fr = {
+
+  switch_lang: "SWITCH TO ENGLISH",
 
   //PAGE D'ACCUEIL
   home_title: "Bienvenue à la chasse aux oeufs de Pâques",
@@ -264,6 +272,8 @@ export const messages_fr = {
 
 
 export const messages_en = {
+
+  switch_lang: "CHANGER AU FRANÇAIS",
 
   //PAGE D'ACCUEIL
   home_title: "Welcome to the Easter Egg Hunt",

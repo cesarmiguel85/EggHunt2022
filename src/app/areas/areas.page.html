@@ -19,35 +19,45 @@
 <ion-content [fullscreen]="true">
   <div id="containerflex">
     <div id="container">
-      <ion-card>
-      
-        <ion-card-content>
-          <table id="cardtable" style="width:100%">
-            <tr>
-              <td>
-                <ion-img class="egg" src="assets/images/Easter-Egg-left.png"></ion-img>
-              </td>
-              <td>
-                <ion-card-title>{{ mydata.allmessages.areas_card_title }}</ion-card-title>
-                <p class="card_p">{{ mydata.allmessages.areas_card_desc }}</p>
-              </td>
-              <td>
-                <ion-img class="egg" src="assets/images/Easter-Egg-right.png"></ion-img>
-              </td>
-            </tr>
-          </table>
-          
-        </ion-card-content>
-      </ion-card>
 
-      <ion-card>
+      <ion-grid>
+        <ion-row class="ion-justify-content-center">
+          <ion-col size-lg="8" size-xs="12">
+
+            <ion-card>
+            
+              <ion-card-content>
+                <table id="cardtable" style="width:100%">
+                  <tr>
+                    <td>
+                      <ion-img class="egg" src="assets/images/Easter-Egg-left.png"></ion-img>
+                    </td>
+                    <td>
+                      <ion-card-title>{{ mydata.allmessages.areas_card_title }}</ion-card-title>
+                      <p class="card_p">{{ mydata.allmessages.areas_card_desc }}</p>
+                    </td>
+                    <td>
+                      <ion-img class="egg" src="assets/images/Easter-Egg-right.png"></ion-img>
+                    </td>
+                  </tr>
+                </table>
+                
+              </ion-card-content>
+            </ion-card>
+
+            <ion-card>
+            
+              <ion-card-content>
+                <div *ngFor="let area of mydata.alldata, index as i">
+                  <ion-button class="areabuttons" size="large" (click)="GoToArea(i)" [ngClass]="{'areadone' : mydata.calcRemaining(i)[0]==0}"><span>{{area.area}}<br><span class="subtitlebutton">{{mydata.allmessages.areas_remaining}} {{mydata.calcRemaining(i)[0]}}</span></span></ion-button>
+                </div>
+              </ion-card-content>
+            </ion-card>
+
+          </ion-col>
+        </ion-row>
+      </ion-grid>
       
-        <ion-card-content>
-          <div *ngFor="let area of mydata.alldata, index as i">
-            <ion-button class="areabuttons" size="large" (click)="GoToArea(i)" [ngClass]="{'areadone' : mydata.calcRemaining(i)[0]==0}"><span>{{area.area}}<br><span class="subtitlebutton">{{mydata.allmessages.areas_remaining}} {{mydata.calcRemaining(i)[0]}}</span></span></ion-button>
-          </div>
-        </ion-card-content>
-      </ion-card>
     </div>
     <div id="footer"></div>
   </div>
