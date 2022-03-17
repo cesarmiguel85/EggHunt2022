@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-img id="headlogo" src="assets/images/HEAD_LOGO.png"></ion-img>
+    </ion-buttons>
+    
+
+    <ion-title>
+      {{ mydata.allmessages.areas_title }}
+    </ion-title>
+    <ion-buttons slot="end" *ngIf="mydata.allvariables.with_db" (click)="quitGame()">
+      <ion-button>
+        Quitter
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="containerflex">
+    <div id="container">
+      <ion-card>
+      
+        <ion-card-content>
+          <table id="cardtable" style="width:100%">
+            <tr>
+              <td>
+                <ion-img class="egg" src="assets/images/Easter-Egg-left.png"></ion-img>
+              </td>
+              <td>
+                <ion-card-title>{{ mydata.allmessages.areas_card_title }}</ion-card-title>
+                <p class="card_p">{{ mydata.allmessages.areas_card_desc }}</p>
+              </td>
+              <td>
+                <ion-img class="egg" src="assets/images/Easter-Egg-right.png"></ion-img>
+              </td>
+            </tr>
+          </table>
+          
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+      
+        <ion-card-content>
+          <div *ngFor="let area of mydata.alldata, index as i">
+            <ion-button class="areabuttons" size="large" (click)="GoToArea(i)" [ngClass]="{'areadone' : mydata.calcRemaining(i)[0]==0}"><span>{{area.area}}<br><span class="subtitlebutton">{{mydata.allmessages.areas_remaining}} {{mydata.calcRemaining(i)[0]}}</span></span></ion-button>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div id="footer"></div>
+  </div>
+
+</ion-content>

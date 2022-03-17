@@ -1,0 +1,7 @@
+{
+  "name": "PTE_EggHunt",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

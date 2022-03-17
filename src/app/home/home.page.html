@@ -1,0 +1,58 @@
+
+
+<ion-content [fullscreen]="true">
+  <div id="containerflex">
+    <ion-button *ngIf="mydata.lang=='fr'" fill="outline" (click)="switchLang('en')" id="switch" slot="end">Switch to English 🇺🇸</ion-button>
+          <ion-button *ngIf="mydata.lang=='en'" fill="outline" (click)="switchLang('fr')" id="switch" slot="end">Changer au Français 🇫🇷</ion-button>
+    <div id="container">
+      <ion-card>
+        
+        <img id="homelogo" src="assets/images/HOME_LOGO.png"/>
+        <ion-card-content>
+          
+          <ion-card-title>{{mydata.allmessages.home_title}}</ion-card-title>
+          <p id="home_p">{{mydata.allmessages.home_desc}}</p>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card *ngIf="mydata.allvariables.with_db" class="cardform">
+      
+        <ion-card-content>
+          
+          <ion-list lines="full" class="myform">
+
+            <ion-item>
+              <ion-label position="stacked">{{mydata.allmessages.home_type}}<ion-text color="danger">*</ion-text></ion-label>
+              <ion-input required type="email" [(ngModel)]="email"></ion-input>
+            </ion-item>
+
+            <ion-item >
+              <ion-label text-wrap class="labelaccept">{{mydata.allmessages.home_disclaimer}}<ion-text color="danger">*</ion-text></ion-label>
+              <ion-checkbox slot="start" [(ngModel)]="accept"></ion-checkbox>
+            </ion-item>
+
+          </ion-list>
+
+          <div class="ion-padding">
+            <ion-button expand="block" (click)="GoToAreaPage()" class="ion-no-margin" disabled="{{(!accept || email.length<3)}}">{{mydata.allmessages.home_start}} <ion-spinner *ngIf="spinner" name="bubbles"></ion-spinner></ion-button>
+          </div>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card *ngIf="!mydata.allvariables.with_db">
+        <ion-card-content>
+          <div class="ion-padding">
+            <ion-button expand="block" (click)="GoToAreaPage()" class="ion-no-margin">{{mydata.allmessages.home_start}}<ion-spinner *ngIf="spinner" name="bubbles"></ion-spinner></ion-button>
+          </div>
+        </ion-card-content>
+      </ion-card>
+      <div id="ranking" *ngIf="mydata.allvariables.with_db">
+        <ion-button color="success" (click)="GoToRanking()">{{ mydata.allmessages.finish_ranking }}</ion-button>
+      </div>
+      <div id="margin" >
+        
+      </div>
+    </div>
+    <div id="footer"></div>
+  </div>
+</ion-content>

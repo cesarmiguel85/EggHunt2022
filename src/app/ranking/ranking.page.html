@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-img id="headlogo" src="assets/images/HEAD_LOGO.png"></ion-img>
+    </ion-buttons>
+    <ion-title>{{ mydata.allmessages.ranking_title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div id="containerflex">
+    <div id="container">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>{{ mydata.allmessages.ranking_card_title }}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          {{ mydata.allmessages.ranking_card_content }}
+          <br>
+          <div id="tablecontainer">
+            <ion-spinner *ngIf="spinner" name="bubbles"></ion-spinner>
+          </div>
+        </ion-card-content>
+      </ion-card>
+
+    </div>
+    <div id="footer"></div>
+  </div>
+  
+</ion-content>

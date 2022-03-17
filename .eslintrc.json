@@ -1,0 +1,64 @@
+{
+  "root": true,
+  "ignorePatterns": ["projects/**/*"],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "parserOptions": {
+        "project": ["tsconfig.json", "e2e/tsconfig.json"],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "plugin:@angular-eslint/ng-cli-compat",
+        "plugin:@angular-eslint/ng-cli-compat--formatting-add-on",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "rules": {
+        "@typescript-eslint/quotes": "off",
+        "@typescript-eslint/type-annotation-spacing": "off",
+        "max-len": "off",
+        "no-var": "off",
+        "@typescript-eslint/semi": "off",
+        "curly": "off",
+        "object-shorthand": "off",
+        "@typescript-eslint/no-shadow": "off",
+        "prefer-arrow/prefer-arrow-functions": "off",
+        "eqeqeq":"off",
+        "@typescript-eslint/naming-convention": "off",
+        "prefer-const": "off",
+        "no-trailing-spaces": "off",
+        "quote-props": "off",
+        "radix": "off",
+        "@angular-eslint/template/eqeqeq": "off",
+        "no-underscore-dangle": "off",
+        "@angular-eslint/component-class-suffix": [
+          "error",
+          {
+            "suffixes": ["Page", "Component"]
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.html"],
+      "extends": ["plugin:@angular-eslint/template/recommended"],
+      "rules": {}
+    }
+  ]
+}

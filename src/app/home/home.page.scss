@@ -1,0 +1,111 @@
+#container {
+  text-align: center;
+  margin:auto auto;
+  width:90%;
+
+}
+#containerflex {
+  text-align: center;
+  margin:auto auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height:100%;
+  overflow: auto;
+  background-image: url('../../assets/images/BACKGROUND.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+ion-content ion-toolbar {
+  --background: translucent;
+}
+
+.subtitlebutton {
+  font-size: x-small;
+  clear: both;
+}
+
+.buttontext{
+  width:100%;
+}
+.labelaccept {
+  font-size: 14px;
+
+}
+
+#footer{
+  position: absolute;
+  height: 10%;
+  width: 100%;
+  bottom: 0px;
+  background-image: url('../../assets/images/eggs_footer.png');
+  background-position: center;
+  background-repeat: repeat-x;
+  background-size: contain;
+}
+.myform {
+  width:100%;
+  margin:auto auto;
+}
+#ranking {
+  margin-bottom:6em;
+}
+
+ion-card {
+  --ion-background-color: rgba(255, 255, 255, 0.9);
+  --color:black;
+  
+}
+
+ion-list {
+  --ion-item-background: rgba(255, 255, 255, 0.6);;
+}
+
+.cardform {
+  width:80%;margin:auto auto;
+  --ion-item-background: rgba(255, 255, 255, 0.95);;
+}
+
+#homelogo {
+  height:120px;
+  margin-top:1em;
+}
+
+#home_p {
+  font-size: 14px !important;
+  color: black !important;
+  margin-top: 1em !important;
+}
+
+#switch {
+  margin:1em 1em auto auto;
+  --background:white;
+}
+
+
+#margin {
+  width:100%;
+  height: 5em;
+
+}

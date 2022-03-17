@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Image Coordinates Finder</title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+
+    <style>
+
+        #container{
+            width: 95vw;
+            height: 75vh;
+            position: relative;
+            background-color: transparent;
+            overflow:auto;
+        }
+
+        #myCanvas {
+            background-color: transparent;
+            position: absolute;
+            top:0px;
+            left:0px;
+            width: 1600px;
+            height:1200px;
+            z-index: 100;
+        }
+
+        #figure {
+            position: absolute;
+            top:0px;
+            left:0px;
+            width: 1600px;
+            height:1200px;
+            z-index:0;
+        }
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+        }
+
+        #rectangleInfo{
+            height:15vh;
+            width:40%;
+        }
+
+        #inFile{
+            margin:1em;
+        }
+
+        #info{
+            height:20vh;
+        }
+
+    </style>
+
+
+
+</head>
+
+<body>
+    
+    <div id="info">
+        <input id="inFile" type='file' onchange="readURL(this);" />
+        <textarea id="rectangleInfo">
+Coordinates generator...
+Draw a rectangle in the image to get the coordinates and width/height (careful with scrollers, clicking them will make a rectangle...).
+One rectangle every 5 seconds (to allow you to scroll back up after drawing one).
+        </textarea>
+    </div>
+
+    <div id="container">
+
+        <canvas id="myCanvas" width=1600 height=1200></canvas>
+        <image id="figure" width="1600" height="1200" src="images/BACKGROUND.jpg">
+        
+
+    </div>
+
+    <script>
+
+        theCanvas = document.getElementById("myCanvas");
+        cX = Math.floor(theCanvas.width / 2);
+        cY = Math.floor(theCanvas.height / 2);
+        ctx = theCanvas.getContext("2d");
+
+        // set up the font
+        ctx.font = "12px Helvetica";
+        ctx.textAlign = 'center';
+        ctx.fillStyle = '#8A8A8A';
+
+
+        // Get the position of the mouse relative to the canvas
+        function getMousePos(canvasDom, mouseEvent) {
+            var rect = canvasDom.getBoundingClientRect();
+            return {
+                x: mouseEvent.clientX - rect.left,
+                y: mouseEvent.clientY - rect.top
+            };
+        }
+
+        var canvas = document.getElementById('myCanvas');
+        var ctx = canvas.getContext('2d');
+        var tic = new Date();
+        var toc = new Date();
+
+        var locA, locB;
+
+        document.addEventListener('mousedown', function(e) {
+            tic = new Date();
+
+            if((tic-toc)>5000) {
+                e.preventDefault();
+                locA = getMousePos(canvas, e);
+                clear(ctx);
+            }
+            
+
+        });
+
+        document.addEventListener('mouseup', function(e) {
+            
+            if((tic-toc)>5000) {
+                e.preventDefault();
+                locB = getMousePos(canvas, e);
+
+                ctx.fillStyle = '#000000';
+                ctx.beginPath();
+                ctx.lineWidth = "6";
+                ctx.strokeStyle = "red";
+                ctx.rect(locA.x, locA.y, (locB.x - locA.x), (locB.y - locA.y));
+                ctx.stroke();
+                //ctx.fillRect(locA.x, locA.y, (locB.x - locA.x), (locB.y - locA.y));
+                //alert("REctangle:\nX: "+locA.x+"\nY: "+locA.y+"\nwidth: "+(locB.x - locA.x)+"\nheight: "+(locB.y - locA.y));
+                ctx.fillText("Rectangle:\nX: "+locA.x+"\nY: "+locA.y+"\nwidth: "+(locB.x - locA.x)+"\nheight: "+(locB.y - locA.y),530,30);
+            
+                $('#rectangleInfo').html("\nx: "+locA.x+",\ny: "+locA.y+",\nwidth: "+(locB.x - locA.x)+",\nheight: "+(locB.y - locA.y)+",")
+
+                toc=new Date();
+            }
+        });
+
+        function clear(c) {
+            c.clearRect(0, 0, 1600, 1200);
+        }
+
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#figure')
+                        .attr('src', e.target.result)
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
