@@ -11,6 +11,8 @@ import {
   delayWhen
 } from 'rxjs/operators';
 
+import * as papa from 'papaparse';
+
 @Component({
   selector: 'app-ranking',
   templateUrl: './ranking.page.html',
@@ -21,63 +23,98 @@ export class RankingPage implements OnInit {
   spinner=true;
   countHTTP=0;
 
-  constructor(public mydata: DataService,private router: Router, private http: HttpClient) { }
+  sourceURL = "";
+  dataRAW=[];
+  headers=[];
+
+  constructor(
+    public mydata: DataService,
+    private router: Router, 
+    private http: HttpClient,
+  ) { 
+
+
+  }
 
   ngOnInit() {
 
     
   }
 
+  //Comparer Function    
+  GetSortOrder(prop) {    
+    return function(a, b) {    
+        if (a[prop] > b[prop]) {    
+            return 1;    
+        } else if (a[prop] < b[prop]) {    
+            return -1;    
+        }    
+        return 0;    
+    }    
+  }    
+
   getRankingTable() {
-    
-    // Http Headers
+ 
+    return new Promise(resolve => {
 
-    let postData = {
-          "dbname": this.mydata.allvariables.dbname
-    }
+      this.sourceURL = this.mydata.allvariables.db_read_source_gsheet;
 
-    console.log("Launching http request"); 
-    
-    /*
-    this.http
-      .post(this.mydata.allvariables.db_tableRanking,postData, { responseType: 'text' })
-      .pipe(
-        timeout(15000)
-      )
-      .subscribe(data => {
-        console.log("DATA FROM PHP");
-        console.log(data);
-        
-        this.spinner=false;
-        document.getElementById('tablecontainer').innerHTML = data;
+      papa.parse(this.sourceURL,{
+        download: true,
+        header: true,
+        dynamicTyping: true,
+        complete: (results) => {
+          
+          if(results.data.length>0) {
 
+            this.dataRAW = results.data;
+            this.dataRAW.sort(this.GetSortOrder("time"));
+            console.log(this.dataRAW);
 
-       }, error => {
-        console.log(error);
-      })
-*/
-      var _document  = document;
-      var _this = this;
+            if (this.mydata.allvariables.db_visible_headers.length>0) {
+              this.headers = this.mydata.allvariables.db_visible_headers;
+            }
+            else {
+              this.headers =Object.keys(this.dataRAW[0]);
+            }
 
-      this.mydata.requestPostJQ(this.mydata.allvariables.db_tableRanking,postData)
-      .then(data => {
-        console.log("DATA FROM PHP");
-        console.log(data);
-        
-        this.spinner=false;
-        _document.getElementById('tablecontainer').innerHTML = data.toString();
-      })
-      .catch(error => {
-          _this.mydata.presentToastBottom("Ranking dit:la base est HS");
-        })
-      
+          }
+          else {
+            this.dataRAW = [];
+          }
 
-      
+          resolve(this.dataRAW);
+          
+        }
+      });
+
+    })
   }
 
-  ionViewWillEnter(){
 
-    this.getRankingTable();
+
+  ionViewDidEnter(){
+
+    this.getRankingTable().then(data => {
+
+      this.spinner = false;
+
+      /*
+      if(this.dataRAW.length<=0) {
+
+      }
+      else {
+        
+        
+        for(var i=0;i<this.dataRAW.length;i++){
+          this.top15.push(data[i]);
+        }
+        console.log("top15");
+        console.log(this.top15);
+        
+      }
+      */
+    });
 
   }
 

@@ -48,6 +48,7 @@ export class HomePage {
     this.mydata.email=this.email;
     this.mydata.nickname=this.nickname;
     this.mydata.timestart = new Date();
+    this.mydata.sent = false;
 
     this.spinner=false;
     this.router.navigate(['/areas']);

@@ -24,9 +24,28 @@
           <br>
           <div id="tablecontainer">
             <ion-spinner *ngIf="spinner" name="bubbles"></ion-spinner>
+            <div *ngIf="dataRAW.length===0 && !spinner">{{this.mydata.allmessages.ranking_empty}}</div>
+
+            <table *ngIf="dataRAW.length>0" class="rankingtable">
+              <tr>
+                <th *ngFor="let head of this.headers; let i = index;">
+                  {{this.mydata.allmessages.ranking_table_header[i]}}
+                </th>
+              </tr>
+              <tr *ngFor="let data of dataRAW; let r=index;">
+                <td *ngFor="let header of this.headers; let c=index;">
+                  <div *ngIf="c===0 && r===0">🥇</div><div *ngIf="c===0 && r===1">🥈</div><div *ngIf="c===0 && r===2">🥉</div>
+                  {{ data[header] }}
+                </td>
+              </tr>
+            </table>
           </div>
         </ion-card-content>
       </ion-card>
+
+      <div id="margin" >
+
+      </div>
 
     </div>
     <div id="footer"></div>

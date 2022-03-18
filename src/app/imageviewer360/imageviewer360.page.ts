@@ -22,7 +22,9 @@ export class Imageviewer360Page implements OnInit {
   markers=[];
 
   constructor(private route: ActivatedRoute, private router: Router, public mydata: DataService) { 
-    console.log(mydata);
+    //console.log(mydata);
+
+    this.alertclick = this.mydata.allvariables.doubleclickcoordinates;
     
     //GET AREA FROM PARAMS ROUTER
     

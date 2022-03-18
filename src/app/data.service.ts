@@ -19,6 +19,8 @@ export class DataService {
 
   nickname = "";
   email = "";
+  sent = false;
+  mytime=0;
 
   timestart:any;
   timeend:any;
@@ -132,7 +134,7 @@ export class DataService {
   async presentToast(message) {
     const toast = await this.toastController.create({
       message: message,
-      duration: 4000,
+      duration: 3000,
       position: 'middle',
     });
     toast.present();
@@ -193,6 +195,9 @@ export class DataService {
         url: myurl, 
         type:"POST",
         cache:false,
+        contentType: 'text/plain',
+        processData: false,
+        headers: {"token": this.allvariables.db_token},
         timeout: 10000,
         dataType: "text",
         data: JSON.stringify(mydata),
@@ -228,6 +233,7 @@ export class DataService {
       
     }
   }
+
 
 
 }

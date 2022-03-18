@@ -31,6 +31,8 @@ export class FinishPage implements OnInit {
   share=true;
   linkedinlink="";
 
+  mycomment ="";
+
 
   constructor(
     public mydata: DataService, 
@@ -65,66 +67,57 @@ export class FinishPage implements OnInit {
 
   sendInfoToDB() {
 
-    // Http Headers
+    this.mydata.mytime = Math.round((this.mydata.timeend - this.mydata.timestart) / 1000);
 
-    let postData = {
-      "email": this.mydata.email,
-      "starttime": this.formatDate(this.mydata.timestart),
-      "endtime": this.formatDate(this.mydata.timeend),
-      "duration": Math.round((this.mydata.timeend - this.mydata.timestart) / 1000),
-      "dbname": this.mydata.allvariables.dbname
+    if(
+      this.mydata.nickname.length>0 &&
+      this.mydata.email.length>0 &&
+      this.mydata.mytime>0 &&
+      !this.mydata.sent
+    )
+    {
+      // Http Headers
+
+      let postData = {
+        "nickname": this.mydata.nickname,
+        "email": this.mydata.email,
+        "time": this.mydata.mytime,
+      }
+
+      console.log("Launching http request score");
+
+      this.mydata.requestPostJQ(this.mydata.allvariables.db_endpoint_log, postData)
+        .then(data => {
+          console.log(data);
+          console.log("DATA PARSED");
+          
+          var JSONdata = JSON.parse(data.toString());
+          console.log(JSONdata);
+
+          if (JSONdata.ok == 1) {
+            this.mydata.presentToastBottom(JSONdata.message);
+          } else {
+            this.mydata.presentToastBottom(JSONdata.error);
+          }
+          
+         this.mydata.sent = true;
+          this.spinner=false;
+        })
+        .catch(error => {
+          console.log(error);
+          this.mydata.presentToastBottom("On n'arrive pas à enregistrer votre score... désolé...");
+          this.spinner=false;
+        })
     }
+    else {
+      if(
+        this.mydata.nickname.length<=0 &&
+        this.mydata.email.length<=0 &&
+        (this.mydata.mytime===0 || isNaN(this.mydata.mytime))
+      ) this.mydata.presentToastBottom("Des données sont manquantes... vous n'avez pas suivi le parcours du jeu :-(");
 
-    console.log("Launching hhtp request");
-
-    /*
-    this.http
-      .post(this.mydata.allvariables.db_addParticpants,postData, { responseType: 'text' })
-      .pipe(
-        timeout(15000)
-      )
-      .subscribe(data => {
-        console.log("DATA FROM PHP");
-        console.log(data);
-        
-
-        console.log("DATA PARSED");
-        var JSONdata = JSON.parse(data.toString());
-        console.log(JSONdata);
-
-        if(JSONdata.ok==1){
-          this.mydata.presentToastBottom(JSONdata.message);
-        }
-        else {
-          this.mydata.presentToastBottom(JSONdata.error);
-        }
-
-       }, error => {
-        console.log(error);
-      })
-    */
-
-    this.mydata.requestPostJQ(this.mydata.allvariables.db_addParticpants, postData)
-      .then(data => {
-        console.log(data);
-        console.log("DATA PARSED");
-        
-        var JSONdata = JSON.parse(data.toString());
-        console.log(JSONdata);
-
-        if (JSONdata.ok == 1) {
-          this.mydata.presentToastBottom(JSONdata.message);
-        } else {
-          this.mydata.presentToastBottom(JSONdata.error);
-        }
-        this.spinner=false;
-      })
-      .catch(error => {
-        console.log(error);
-        this.mydata.presentToastBottom("On n'arrive pas à enregistrer votre score... désolé...");
-        this.spinner=false;
-      })
-
+      if(this.mydata.sent) this.mydata.presentToastBottom("Données déjà envoyées...");
+    }
 
 
   }
@@ -152,11 +145,56 @@ export class FinishPage implements OnInit {
 
   ionViewDidEnter() {
 
+    console.log({ 
+      "nickname": this.mydata.nickname,
+      "email": this.mydata.email,
+      "comment": this.mycomment,
+      "time": this.mydata.mytime,
+      "sent": this.mydata.sent
+    }
+      );
   }
 
   shareLinkedIn(){
 
   }
+
+  sendFeedback() {
+
+    let postData = {
+      "nickname": this.mydata.nickname,
+      "email": this.mydata.email,
+      "comment": this.mycomment
+    }
+
+    console.log("Launching hhtp request comment");
+
+
+    this.mydata.requestPostJQ(this.mydata.allvariables.db_endpoint_comment, postData)
+      .then(data => {
+        console.log(data);
+        console.log("DATA PARSED");
+        
+        var JSONdata = JSON.parse(data.toString());
+        console.log(JSONdata);
+
+        if (JSONdata.ok == 1) {
+          this.mydata.presentToastBottom(JSONdata.message);
+        } else {
+          this.mydata.presentToastBottom(JSONdata.error);
+        }
+        
+        this.spinner=false;
+      })
+      .catch(error => {
+        console.log(error);
+        this.mydata.presentToastBottom("On n'arrive pas à enregistrer votre commentaire... désolé :-(");
+        this.spinner=false;
+      })
+
+
+  }
+
 
 
 

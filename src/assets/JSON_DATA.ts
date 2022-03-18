@@ -213,8 +213,11 @@ export const variables = {
   valid_domain: "", //si l'email doit être l'email pro, par ex. accor.com, sinon laisser en blanc
 
   db_endpoint_log: "https://nodered.cesarmiguel.duckdns.org/EggHunt2022/log",
+  db_endpoint_comment: "https://nodered.cesarmiguel.duckdns.org/EggHunt2022/comment",
   db_token: "QAZPLM1209WSXOKN",
-
+  db_read_source_gsheet: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ7dCFUQqNzRMLn1bzO426uZ34JmbkSaNjfmeiMq5dww3uiL7eOjpmKaXkPM54xrtsG71hGRAPnnrM3/pub?gid=0&single=true&output=csv",
+  db_visible_headers: ["nickname", "email", "time"], // Leave empty array [] to show all headers
+  
   root: "https://cesarmiguel85.github.io/EggHunt2022", //adresse de la racine pour retour forcé
   shareable: false, //afficher le bouton "partager sur linkedin"
 
@@ -259,15 +262,17 @@ export const messages_fr = {
   finish_ranking: "Consulter le ranking",
   finish_cardtime_saving:"",
 
-  finish_share_title: "Partagez votre score sur LinkedIn! 👍🏻",
-  finish_share_text1: "Partager sur LinkedIn",
-  finish_share_text2: "",
   finish_quit: "Quitter",
 
+  finish_cardcomment_title: "Laissez-nous un commentaire!",
+  finish_cardcomment_content: "C'est optionnel, mais on adore les feedbacks! 😉",
+  finish_cardcomment_button: "Envoyer le commentaire",
 
-  ranking_title: "",
-  ranking_card_title: "",
-  ranking_card_content: "",
+  ranking_title: "Ranking",
+  ranking_card_title: "Voici les joueurs les plus rapides!",
+  ranking_card_content: "Félicications à tous pour avoir terminé le jeu 😉 (il faut peut-être attendre un peu que le ranking se mette à jour ou vider le cache)",
+  ranking_table_header: ["Nom/Pseudo", "Email", "Temps (s)"], //étiquettes pour la table, attention à l'ordre, elles matchent les headers dans la variable db_visible_headers
+  ranking_empty: "Il semblerait qu'il n'y a pas encore eu de joeurs..."
 
 }
 
@@ -311,13 +316,16 @@ export const messages_en = {
   finish_ranking: "Check out the ranking",
   finish_cardtime_saving:"",
 
-  finish_share_title: "Share your score and the game on LinkedIn! 👍🏻",
-  finish_share_text1: "Share on LinkedIn",
-  finish_share_text2: "",
   finish_quit: "Quit",
 
-  ranking_title: "",
-  ranking_card_title: "",
-  ranking_card_content: "",
+  finish_cardcomment_title: "Leave us a comment!",
+  finish_cardcomment_content: "It is optional, but we do love feedback! 😉",
+  finish_cardcomment_button: "Send the feedback",
+
+  ranking_title: "Leaderboard",
+  ranking_card_title: "These are the fastest players!",
+  ranking_card_content: "Congratulations to all for finishing 😉 (it might take some minutes so refresh or you might have to empty the cache",
+  ranking_table_header: ["Nane/Nickname", "Email", "Time (s)"],
+  ranking_empty: "It seems there are no players yet..."
 
 }
