@@ -209,13 +209,14 @@ export const variables = {
   doubleclickcoordinates:true, //mettre true pour activer l'affichage des coordonnees sur image360 avec double click
 
   //Si pas de base de données (false), toutes lesoptions sur l'app seront desactivée
-  with_db: false,
-  dbname: "",
-  db_addParticpants: "",
-  db_tableRanking: "",
-  db_emailCheck: "",
-  root: "https://cesarmiguel85.github.io/EggHunt2020",
-  shareable: true,
+  with_db: true,
+  valid_domain: "", //si l'email doit être l'email pro, par ex. accor.com, sinon laisser en blanc
+
+  db_endpoint_log: "https://nodered.cesarmiguel.duckdns.org/EggHunt2022/log",
+  db_token: "QAZPLM1209WSXOKN",
+
+  root: "https://cesarmiguel85.github.io/EggHunt2022", //adresse de la racine pour retour forcé
+  shareable: false, //afficher le bouton "partager sur linkedin"
 
 }
 
@@ -228,8 +229,8 @@ export const messages_fr = {
   home_subtitle: "",
   home_desc: "Ce n'est pas parce que nous sommes confinés que nous ne pouvons pas maintenir l'esprit des activités!\n En prenant plusieurs idées d'ici et de là, profitant d'un side-project personnel avec mon collègue Andres, je vous propose une chasse aux oeufs de Pâques autour du monde en mode 'évasion'. J'ai rassemblé les quelques photos 360 de mes derniers voyages (elles pourraient être plus adaptées pour ceci, mais je n'avais jamais pensé faire ce jeu quand je les avais prises). J'ai caché des oeufs dans les images qu'il faudra retrouver.\n\nUne occasion pour partager avec vous des endroits magnifiques de façon ludique 😉\n\nCesar MIGUEL\n(Un merci spécial à Manu qui a pris beaucoup d'entre elles!)",
   //Si usage de Base de données, consentement
-  home_disclaimer: "",
-  home_type: "",
+  home_nickname: "Quel est votre nom ou pseudo?",
+  home_email: "Quel est votre email?",
   home_start: "Démarrer la chasse!",
 
   //PAGE DES ZONES
@@ -255,7 +256,7 @@ export const messages_fr = {
   finish_card_content: "J'espère que vous avez apprécié ce jeu et il vous a permis de vous évader ne serait-ce que quelques minutes!\n\nPeut-être vous avez des idées pour les prochaines vacances? 😉\n\nCesar MIGUEL",
   finish_cardtime_title: "Voici votre score",
   finish_cardtime_content: "Vous avez terminé ce jeu en ",
-  finish_ranking: "",
+  finish_ranking: "Consulter le ranking",
   finish_cardtime_saving:"",
 
   finish_share_title: "Partagez votre score sur LinkedIn! 👍🏻",
@@ -280,8 +281,8 @@ export const messages_en = {
   home_subtitle: "",
   home_desc: "The confinement should not prevent us from enjoying the essence of some pleasures!\n Borrowing some ideas from here and there, and thanks to a side-project with my colleague Andres, I present to you a virtual Easter Egg Hunt around travel and mind 'evasion'. I have gathered the 360º images from my past travels (they are not the best pictures for this, but I never expected I would use them for this purpose!). I hid some Easter Eggs in the image that you will have to find.\n\n This is an occasion to daydream and share with you some amazing places in a playful way 😉\n\nCesar MIGUEL\n(Special thanks to Manu who took most of these pictures!)",
   //Si usage de Base de données, consentement
-  home_disclaimer: "",
-  home_type: "",
+  home_nickname: "What is your name or nickname?",
+  home_email: "What is your email?",
   home_start: "Start the hunt!",
 
   //PAGE DES ZONES
@@ -307,7 +308,7 @@ export const messages_en = {
   finish_card_content: "I hope you liked this little game and I wish it took your mind off the confinementor a second. \n\n Maybe you found your next holiday destination ? 😉\n\nCesar MIGUEL",
   finish_cardtime_title: "This is your score",
   finish_cardtime_content: "You finished the game in ",
-  finish_ranking: "",
+  finish_ranking: "Check out the ranking",
   finish_cardtime_saving:"",
 
   finish_share_title: "Share your score and the game on LinkedIn! 👍🏻",

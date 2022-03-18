@@ -15,6 +15,7 @@ export class HomePage {
 
   accept=false;
   email = "";
+  nickname="";
   spinner=false;
   lang='fr';
 
@@ -42,96 +43,15 @@ export class HomePage {
 
     this.spinner=true;
 
-    let postData = {
-      "dbname": this.mydata.allvariables.dbname,
-      "email": this.email
-    }
-
     console.log("Launching http request"); 
-
-    /*
-    this.http
-      .post(this.mydata.allvariables.db_emailCheck,postData, { responseType: 'text' })
-      .pipe(timeout(15000))
-      .subscribe(data => {
-        console.log("DATA FROM PHP");
-        console.log(data);
-        var JSONdata = JSON.parse(data.toString());
-
-
-        if (parseInt(JSONdata.ok)==1) {
-          this.spinner=false;
           
-          this.mydata.email=this.email;
-          
-          this.mydata.timestart = new Date();
-          
-          this.router.navigate(['/areas']);
-        }
-        else {
-          this.mydata.presentToastBottom(JSONdata.error);
-          this.spinner=false;
+    this.mydata.email=this.email;
+    this.mydata.nickname=this.nickname;
+    this.mydata.timestart = new Date();
 
-        }
-
-
-      }, error => {
-        console.log(error);
-        this.mydata.presentToastBottom("Une erreur est survenu essayant de contacter la base de données... Votre score risque de ne pas être enregistré!");
-        
-        this.spinner=false;
-          
-        this.mydata.email=this.email;
-        
-        this.mydata.timestart = new Date();
-        this.router.navigate(['/areas']);
-
-      })
-    */
-
-   if (this.mydata.allvariables.with_db) {
-    this.mydata.requestPostJQ(this.mydata.allvariables.db_emailCheck,postData)
-    .then(data => {
-      var JSONdata = JSON.parse(data.toString());
-
-
-      if (parseInt(JSONdata.ok)==1) {
-        this.spinner=false;
-        
-        this.mydata.email=this.email;
-        
-        this.mydata.timestart = new Date();
-        
-        this.router.navigate(['/areas']);
-      }
-      else {
-        this.mydata.presentToastBottom(JSONdata.error);
-        this.spinner=false;
-
-      }
-
-    })
-    .catch(error => {
-        console.log(error);
-          this.mydata.presentToastBottom("Une erreur est survenu essayant de contacter la base de données... Votre score risque de ne pas être enregistré!");
-          
-          this.spinner=false;
-            
-          this.mydata.email=this.email;
-          
-          this.mydata.timestart = new Date();
-          this.router.navigate(['/areas']);
-      })
-
-    }
-    else {
-      this.spinner=false;
-            
-      this.mydata.email=this.email;
-      
-      this.mydata.timestart = new Date();
-      this.router.navigate(['/areas']);
-    }
+    this.spinner=false;
+    this.router.navigate(['/areas']);
+    
   }
 
   GoToRanking() {
@@ -148,6 +68,18 @@ export class HomePage {
   
   ngOnInit() {
    
+  }
+
+  blockStart() {
+
+    const regExp = /^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$/;
+
+    if (this.nickname.length>1 && regExp.test(this.email)) {
+      if(this.email.indexOf(this.mydata.allvariables.valid_domain)>=0){
+        return false
+      }
+    }
+    return true;
   }
 
 }

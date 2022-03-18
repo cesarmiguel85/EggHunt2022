@@ -30,19 +30,18 @@
                   <ion-list lines="full" class="myform">
 
                     <ion-item>
-                      <ion-label position="stacked">{{mydata.allmessages.home_type}}<ion-text color="danger">*</ion-text></ion-label>
-                      <ion-input required type="email" [(ngModel)]="email"></ion-input>
+                      <ion-label position="stacked">{{mydata.allmessages.home_nickname}}<ion-text color="danger"> *</ion-text></ion-label>
+                      <ion-input required type="email" [(ngModel)]="nickname"></ion-input>
                     </ion-item>
-
-                    <ion-item >
-                      <ion-label text-wrap class="labelaccept">{{mydata.allmessages.home_disclaimer}}<ion-text color="danger">*</ion-text></ion-label>
-                      <ion-checkbox slot="start" [(ngModel)]="accept"></ion-checkbox>
+                    <ion-item>
+                      <ion-label position="stacked">{{mydata.allmessages.home_email}}<ion-text color="danger"> *</ion-text></ion-label>
+                      <ion-input required type="email" [(ngModel)]="email"></ion-input>
                     </ion-item>
 
                   </ion-list>
 
                   <div class="ion-padding">
-                    <ion-button expand="block" (click)="GoToAreaPage()" class="ion-no-margin" disabled="{{(!accept || email.length<3)}}">{{mydata.allmessages.home_start}} <ion-spinner *ngIf="spinner" name="bubbles"></ion-spinner></ion-button>
+                    <ion-button expand="block" (click)="GoToAreaPage()" class="ion-no-margin" disabled="{{blockStart()}}">{{mydata.allmessages.home_start}} <ion-spinner *ngIf="spinner" name="bubbles"></ion-spinner></ion-button>
                   </div>
                 </ion-card-content>
               </ion-card>

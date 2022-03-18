@@ -17,6 +17,7 @@ export class DataService {
 
   verbose = false;
 
+  nickname = "";
   email = "";
 
   timestart:any;
@@ -212,13 +213,17 @@ export class DataService {
 
   switchLang(lang){
     switch(lang) {
-      case 'fr':
-        this.allmessages = messages_fr;
-        this.lang='fr';
-        break;
-      default:
+      case 'en':
         this.allmessages = messages_en;
         this.lang='en';
+        break;
+      case 'it':
+        this.allmessages = messages_en;
+        this.lang='en';
+        break;
+      default:
+        this.allmessages = messages_fr;
+        this.lang='fr';
         break;
       
     }
