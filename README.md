@@ -19,13 +19,14 @@ https://cesarmiguel85.github.io/EggHunt2020
 
 ## How to fork and personalise:
 * Fork the repo
-* Upload your 360 jpeg images WITH THE EGGS IN THEM (use Gimp, paint or whatever tool you prefer), to src/assets/areas/
+* Upload your 360 jpeg images WITH THE EGGS IN THEM (use Gimp or whatever tool you prefer that keep the metadata intact), to src/assets/areas/
 * Rename file src/assets/JSON_DATA.ts.example to src/assets/JSON_DATA.ts and change with your images, the rectangle coordinates to your eggs, your texts...
 
 
-**How to easily get the coordinates of an egg?** 
+## How to easily get the coordinates of an egg?** 
 
-Set variable doubleclickcoordinates=true in JSON_DATA.ts: a notification showing the coordinates x and y will show when you double click anywhere on the 360 image.
+Set variable doubleclickcoordinates=true in JSON_DATA.ts: 
+A notification showing the coordinates x and y will show when you double click anywhere on the 360 image.
 
 
 ## How to set up Google Sheets as database:
@@ -41,7 +42,7 @@ To read the data of "Scores" (Sheet1), publish the GSheet as csv (File>Publish t
 To write the data: open Apps Script from the GSheet (Extensions>Apps script)
 
 
-**Create a file "scores.gs"**
+- **Create a file "scores.gs"**
 
 ```
 function doPost(e) { 
@@ -87,12 +88,13 @@ Run the setUp function once to validate access to data.
 Deploy and use the address in variable db_endpoint_log
 
 
-**Create a file "comments.gs"**
+- **Create a file "comments.gs"**
 
 Exactly the same file, just change the line to point to the new Sheet "Comments".
 
-````
+```
 var sheet = ss.getSheetByName("Comments");
+
 ```
 
 Deploy and use the address in variable db_endpoint_comment
