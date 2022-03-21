@@ -3,6 +3,7 @@ A virtual Easter egg hunt activity using 360 images (photospheres) based on the 
 
 Original project:
 https://github.com/cesarmiguel85/EggHunt2020
+
 Demo:
 https://cesarmiguel85.github.io/EggHunt2020
 
@@ -25,7 +26,8 @@ https://cesarmiguel85.github.io/EggHunt2020
 
 ## How to easily get the coordinates of an egg?** 
 
-Set variable doubleclickcoordinates=true in JSON_DATA.ts: 
+Set variable doubleclickcoordinates=true in JSON_DATA.ts.
+
 A notification showing the coordinates x and y will show when you double click anywhere on the 360 image.
 
 
