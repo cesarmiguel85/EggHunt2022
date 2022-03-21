@@ -212,8 +212,10 @@ export const variables = {
   with_db: true,
   valid_domain: "", //si l'email doit être l'email pro, par ex. accor.com, sinon laisser en blanc
 
-  db_endpoint_log: "https://nodered.cesarmiguel.duckdns.org/EggHunt2022/log",
-  db_endpoint_comment: "https://nodered.cesarmiguel.duckdns.org/EggHunt2022/comment",
+  //db_endpoint_log: "https://nodered.cesarmiguel.duckdns.org/EggHunt2022/log",
+  db_endpoint_log: "https://script.google.com/macros/s/AKfycbz9nEy0RbpBztrOzQyRJwKRhjesnAa-rxd3Pjl89m5thQVZnbuTOQUkCKJV05GUn0aQ/exec",
+  //db_endpoint_comment: "https://nodered.cesarmiguel.duckdns.org/EggHunt2022/comment",
+  db_endpoint_comment: "https://script.google.com/macros/s/AKfycbwfIBCQCyM19vsKfKyt5YJYRb6vuVubYCN-hRaLtNIVnTBJyfMaWbLdrUSq_rsJ9fHZ/exec",
   db_token: "QAZPLM1209WSXOKN",
   db_read_source_gsheet: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ7dCFUQqNzRMLn1bzO426uZ34JmbkSaNjfmeiMq5dww3uiL7eOjpmKaXkPM54xrtsG71hGRAPnnrM3/pub?gid=0&single=true&output=csv",
   db_visible_headers: ["nickname", "email", "time"], // Leave empty array [] to show all headers

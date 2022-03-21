@@ -29,6 +29,7 @@
         "no-trailing-spaces": "off",
         "quote-props": "off",
         "radix": "off",
+        "quotemark": "off",
         "@angular-eslint/template/eqeqeq": "off",
         "no-underscore-dangle": "off",
         "@angular-eslint/component-class-suffix": [

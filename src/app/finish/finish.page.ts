@@ -86,7 +86,7 @@ export class FinishPage implements OnInit {
 
       console.log("Launching http request score");
 
-      this.mydata.requestPostJQ(this.mydata.allvariables.db_endpoint_log, postData)
+      this.mydata.requestPostJQForm(this.mydata.allvariables.db_endpoint_log, postData)
         .then(data => {
           console.log(data);
           console.log("DATA PARSED");
@@ -170,12 +170,13 @@ export class FinishPage implements OnInit {
     console.log("Launching hhtp request comment");
 
 
-    this.mydata.requestPostJQ(this.mydata.allvariables.db_endpoint_comment, postData)
+    this.mydata.requestPostJQForm(this.mydata.allvariables.db_endpoint_comment, postData)
       .then(data => {
         console.log(data);
         console.log("DATA PARSED");
         
-        var JSONdata = JSON.parse(data.toString());
+        //var JSONdata = JSON.parse(data.toString());
+        var JSONdata:any = data;
         console.log(JSONdata);
 
         if (JSONdata.ok == 1) {

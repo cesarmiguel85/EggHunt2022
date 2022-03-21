@@ -150,41 +150,7 @@ export class DataService {
   }
 
 
-  requestPostHHTTP(url, data){
-
-    console.log("HTTP REQUEST");
-
-    var head = new HttpHeaders();
-    head.append('Content-Type', 'text/plain');
-    head.append('Accept', '*/*');
-    head.append('Connection','keep-alive');
-    head.append('Access-Control-Allow-Headers', 'X-Requested-With')  
-
-
-    return new Promise((resolve,reject) => {
-      this.http
-        .post(url,data, { headers: head, responseType: 'text' }
-        )
-        .subscribe(data => {
-          console.log("DATA FROM REQUEST");
-          console.log(data);
-          resolve(data);
-
-        }, error => {
-          console.log(error);
-
-            this.presentToastBottom("Désolé la base de données est HS...");
-            reject(error);
-          
-        })
-        
-    });
-
-    
-  }
-
-
-  requestPostJQ(myurl, mydata){
+  requestPostJQnodered(myurl, mydata){
 
     console.log("JQ AJAX REQUEST ");
 
@@ -201,6 +167,44 @@ export class DataService {
         timeout: 10000,
         dataType: "text",
         data: JSON.stringify(mydata),
+        success: function(result){
+          resolve(result);
+        },
+        error: function(err){
+          console.log(err);
+          reject(err);
+        }
+    });
+
+    });
+
+    
+  }
+
+  requestPostJQForm(myurl, mydata){
+
+    console.log("JQ AJAX REQUEST ");
+
+
+    return new Promise((resolve,reject) => {
+      
+      var data = new FormData();
+
+      Object.keys(mydata).forEach(function(key) {
+        if(mydata[key]) {
+          data.append( key, mydata[key] );
+          console.log('Key : ' + key + ', Value : ' + data[key])
+        }
+      });
+
+      $.ajax({
+        url: myurl, 
+        type:"POST",
+        cache:false,
+        processData: false,
+        contentType: false,
+        timeout: 10000,
+        data: data,
         success: function(result){
           resolve(result);
         },
