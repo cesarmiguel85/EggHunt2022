@@ -214,8 +214,8 @@ export const variables = {
   db_endpoint_log: "https://script.google.com/macros/s/.../exec",
   db_endpoint_comment: "https://script.google.com/macros/s/.../exec",
   db_token: "header variable token=XXX if wanted to implement check",
-  
-  db_read_source_gsheet: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ7dCFUQqNzRMLn1bzO426uZ34JmbkSaNjfmeiMq5dww3uiL7eOjpmKaXkPM54xrtsG71hGRAPnnrM3/pub?gid=0&single=true&output=csv",
+
+  db_read_source_gsheet: "https://docs.google.com/spreadsheets/d/e/.../pub?gid=0&single=true&output=csv",
   db_visible_headers: ["nickname", "email", "time"], // Leave empty array [] to show all headers
   
   root: "https://cesarmiguel85.github.io/EggHunt2022", //adresse de la racine pour retour forcé

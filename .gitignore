@@ -13,7 +13,7 @@ Thumbs.db
 UserInterfaceState.xcuserstate
 $RECYCLE.BIN/
 
-/assets/JSON_DATA.ts
+/src/assets/JSON_DATA.ts
 
 *.log
 log.txt
