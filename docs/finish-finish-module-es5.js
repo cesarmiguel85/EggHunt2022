@@ -279,8 +279,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             console.log("Launching http request score");
             this.mydata.requestPostJQForm(this.mydata.allvariables.db_endpoint_log, postData).then(function (data) {
               console.log(data);
-              console.log("DATA PARSED");
-              var JSONdata = JSON.parse(data.toString());
+              console.log("DATA PARSED"); //var JSONdata = JSON.parse(data.toString());
+
+              var JSONdata = data;
               console.log(JSONdata);
 
               if (JSONdata.ok == 1) {

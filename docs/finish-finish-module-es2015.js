@@ -171,7 +171,8 @@ let FinishPage = class FinishPage {
                 .then(data => {
                 console.log(data);
                 console.log("DATA PARSED");
-                var JSONdata = JSON.parse(data.toString());
+                //var JSONdata = JSON.parse(data.toString());
+                var JSONdata = data;
                 console.log(JSONdata);
                 if (JSONdata.ok == 1) {
                     this.mydata.presentToastBottom(JSONdata.message);

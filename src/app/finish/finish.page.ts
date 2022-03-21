@@ -91,7 +91,9 @@ export class FinishPage implements OnInit {
           console.log(data);
           console.log("DATA PARSED");
           
-          var JSONdata = JSON.parse(data.toString());
+          //var JSONdata = JSON.parse(data.toString());
+          var JSONdata:any = data;
+
           console.log(JSONdata);
 
           if (JSONdata.ok == 1) {
