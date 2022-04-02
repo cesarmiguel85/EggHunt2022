@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-img id=\"headlogo\" src=\"assets/images/HEAD_LOGO.png\"></ion-img>\n    </ion-buttons>\n    <ion-title>{{ mydata.allmessages.finish_title }}</ion-title>\n    <ion-buttons slot=\"end\" (click)=\"exitPage()\">\n      <ion-button>\n        {{ mydata.allmessages.finish_quit }}\n      </ion-button>\n    </ion-buttons>\n  </ion-toolbar>\n  \n</ion-header>\n\n<ion-content [fullscreen]=\"true\">\n  <div id=\"containerflex\">\n    <div id=\"container\">\n\n\n      <ion-grid>\n        <ion-row class=\"ion-justify-content-center\">\n          <ion-col size-lg=\"8\" size-xs=\"12\">\n\n\n            <ion-card>\n            \n              <ion-card-content>\n\n                <table style=\"width:100%\">\n                  <tr>\n                    <td>\n                      <ion-img class=\"egg\" src=\"assets/images/Easter-Egg-left2.png\"></ion-img>\n                    </td>\n                    <td>\n                      <ion-card-title>{{ mydata.allmessages.finish_card_title }}</ion-card-title>\n                      {{ mydata.allmessages.finish_card_content }}\n                      \n                    </td>\n                    <td>\n                      <ion-img class=\"egg\" src=\"assets/images/Easter-Egg-right2.png\"></ion-img>\n                    </td>\n                  </tr>\n                </table>\n\n                <br>\n                      <img id=\"finishimg\" src=\"assets/images/FINISH.png\" alt=\"\">\n\n              </ion-card-content>\n            </ion-card>\n\n            <ion-card>\n              <ion-card-header>\n                <ion-card-title>{{ mydata.allmessages.finish_cardcomment_title }}</ion-card-title>\n              </ion-card-header>\n            \n              <ion-card-content>\n                <p class=\"score\">{{ mydata.allmessages.finish_cardcomment_content }} {{mytime_min}} min. {{mytime_sec}} sec.</p>\n                <p class=\"saving\"><ion-item>\n                  <ion-textarea [(ngModel)]=\"mycomment\"></ion-textarea>\n                  </ion-item>\n                </p>\n                <p class=\"saving\"><ion-button (click)=\"sendFeedback()\">{{mydata.allmessages.finish_cardcomment_button}} &nbsp;<ion-icon name=\"send-outline\"></ion-icon></ion-button></p>\n              \n              </ion-card-content>\n            </ion-card>\n\n            <ion-card>\n              <ion-card-header>\n                <ion-card-title>{{ mydata.allmessages.finish_cardtime_title }}</ion-card-title>\n              </ion-card-header>\n            \n              <ion-card-content>\n                <p class=\"score\">{{ mydata.allmessages.finish_cardtime_content }} {{mytime_min}} min. {{mytime_sec}} sec.</p>\n                <p class=\"saving\"*ngIf=\"spinner && mydata.allvariables.with_db\" ><ion-spinner name=\"bubbles\"></ion-spinner> <span>{{ mydata.allmessages.finish_cardtime_saving }}</span></p>\n                <p class=\"saving\" ><ion-button color=\"success\" (click)=\"GoToRanking()\">{{ mydata.allmessages.finish_ranking }}</ion-button></p>\n              \n              </ion-card-content>\n            </ion-card>\n\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n\n      <div id=\"margin\" >\n        \n      </div>\n\n    </div>\n    <div id=\"footer\"></div>\n  </div>\n\n</ion-content>\n";
+    __webpack_exports__["default"] = "<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-img id=\"headlogo\" src=\"assets/images/HEAD_LOGO.png\"></ion-img>\n    </ion-buttons>\n    <ion-title>{{ mydata.allmessages.finish_title }}</ion-title>\n    <ion-buttons slot=\"end\" (click)=\"exitPage()\">\n      <ion-button>\n        {{ mydata.allmessages.finish_quit }}\n      </ion-button>\n    </ion-buttons>\n  </ion-toolbar>\n  \n</ion-header>\n\n<ion-content [fullscreen]=\"true\">\n  <div id=\"containerflex\">\n    <div id=\"container\">\n\n\n      <ion-grid>\n        <ion-row class=\"ion-justify-content-center\">\n          <ion-col size-lg=\"8\" size-xs=\"12\">\n\n\n            <ion-card>\n            \n              <ion-card-content>\n\n                <table style=\"width:100%\">\n                  <tr>\n                    <td>\n                      <ion-img class=\"egg\" src=\"assets/images/Easter-Egg-left2.png\"></ion-img>\n                    </td>\n                    <td>\n                      <ion-card-title>{{ mydata.allmessages.finish_card_title }}</ion-card-title>\n                      {{ mydata.allmessages.finish_card_content }}\n                      \n                    </td>\n                    <td>\n                      <ion-img class=\"egg\" src=\"assets/images/Easter-Egg-right2.png\"></ion-img>\n                    </td>\n                  </tr>\n                </table>\n\n                <br>\n                      <img id=\"finishimg\" src=\"assets/images/FINISH.png\" alt=\"\">\n\n              </ion-card-content>\n            </ion-card>\n\n            <ion-card>\n              <ion-card-header>\n                <ion-card-title>{{ mydata.allmessages.finish_cardcomment_title }}</ion-card-title>\n              </ion-card-header>\n            \n              <ion-card-content>\n                <p class=\"score\">{{ mydata.allmessages.finish_cardcomment_content }}</p>\n                <p class=\"saving\"><ion-item>\n                  <ion-textarea [(ngModel)]=\"mycomment\"></ion-textarea>\n                  </ion-item>\n                </p>\n                <p class=\"saving\"><ion-button (click)=\"sendFeedback()\">{{mydata.allmessages.finish_cardcomment_button}} &nbsp;<ion-icon name=\"send-outline\"></ion-icon></ion-button></p>\n              \n              </ion-card-content>\n            </ion-card>\n\n            <ion-card>\n              <ion-card-header>\n                <ion-card-title>{{ mydata.allmessages.finish_cardtime_title }}</ion-card-title>\n              </ion-card-header>\n            \n              <ion-card-content>\n                <p class=\"score\">{{ mydata.allmessages.finish_cardtime_content }} {{mytime_min}} min. {{mytime_sec}} sec.</p>\n                <p class=\"saving\"*ngIf=\"spinner && mydata.allvariables.with_db\" ><ion-spinner name=\"bubbles\"></ion-spinner> <span>{{ mydata.allmessages.finish_cardtime_saving }}</span></p>\n                <p class=\"saving\" ><ion-button color=\"success\" (click)=\"GoToRanking()\">{{ mydata.allmessages.finish_ranking }}</ion-button></p>\n              \n              </ion-card-content>\n            </ion-card>\n\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n\n      <div id=\"margin\" >\n        \n      </div>\n\n    </div>\n    <div id=\"footer\"></div>\n  </div>\n\n</ion-content>\n";
     /***/
   },
 
@@ -272,9 +272,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           if (this.mydata.nickname.length > 0 && this.mydata.email.length > 0 && this.mydata.mytime > 0 && !this.mydata.sent) {
             // Http Headers
             var postData = {
+              "sheet": "Scores",
               "nickname": this.mydata.nickname,
               "email": this.mydata.email,
-              "time": this.mydata.mytime
+              "time": this.mydata.mytime,
+              "ok_message": this.mydata.allmessages.finish_scores_ok_message
             };
             console.log("Launching http request score");
             this.mydata.requestPostJQForm(this.mydata.allvariables.db_endpoint_log, postData).then(function (data) {
@@ -295,7 +297,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             })["catch"](function (error) {
               console.log(error);
 
-              _this.mydata.presentToastBottom("On n'arrive pas à enregistrer votre score... désolé...");
+              _this.mydata.presentToastBottom(_this.mydata.allmessages.finish_scores_nok_message);
 
               _this.spinner = false;
             });
@@ -344,12 +346,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _this2 = this;
 
           var postData = {
+            "sheet": "Comments",
             "nickname": this.mydata.nickname,
             "email": this.mydata.email,
-            "comment": this.mycomment
+            "comment": this.mycomment,
+            "ok_message": this.mydata.allmessages.finish_comments_ok_message
           };
           console.log("Launching hhtp request comment");
-          this.mydata.requestPostJQForm(this.mydata.allvariables.db_endpoint_comment, postData).then(function (data) {
+          this.mydata.requestPostJQForm(this.mydata.allvariables.db_endpoint_log, postData).then(function (data) {
             console.log(data);
             console.log("DATA PARSED"); //var JSONdata = JSON.parse(data.toString());
 
@@ -366,7 +370,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           })["catch"](function (error) {
             console.log(error);
 
-            _this2.mydata.presentToastBottom("On n'arrive pas à enregistrer votre commentaire... désolé :-(");
+            _this2.mydata.presentToastBottom(_this2.mydata.allmessages.finish_comments_nok_message);
 
             _this2.spinner = false;
           });

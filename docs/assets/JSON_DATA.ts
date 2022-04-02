@@ -213,14 +213,15 @@ export const variables = {
   valid_domain: "", //si l'email doit être l'email pro, par ex. accor.com, sinon laisser en blanc
 
   //db_endpoint_log: "https://nodered.cesarmiguel.duckdns.org/EggHunt2022/log",
-  db_endpoint_log: "https://script.google.com/macros/s/AKfycbz9nEy0RbpBztrOzQyRJwKRhjesnAa-rxd3Pjl89m5thQVZnbuTOQUkCKJV05GUn0aQ/exec",
+  db_endpoint_log: "https://script.google.com/macros/s/AKfycbyFnJzyDg049e8aIBj-kZa8_967HGn6pOR8-ZR5QjkXcvX1Y5nyrx0bwYrCwiPMtcyU/exec",
   //db_endpoint_comment: "https://nodered.cesarmiguel.duckdns.org/EggHunt2022/comment",
-  db_endpoint_comment: "https://script.google.com/macros/s/AKfycbwfIBCQCyM19vsKfKyt5YJYRb6vuVubYCN-hRaLtNIVnTBJyfMaWbLdrUSq_rsJ9fHZ/exec",
+  db_id_scores: "Scores",
+  db_id_comments: "Comments",
   db_token: "QAZPLM1209WSXOKN",
   db_read_source_gsheet: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ7dCFUQqNzRMLn1bzO426uZ34JmbkSaNjfmeiMq5dww3uiL7eOjpmKaXkPM54xrtsG71hGRAPnnrM3/pub?gid=0&single=true&output=csv",
   db_visible_headers: ["nickname", "email", "time"], // Leave empty array [] to show all headers
   
-  root: "https://cesarmiguel85.github.io/EggHunt2022", //adresse de la racine pour retour forcé
+  root: "./", //adresse de la racine pour retour forcé
   shareable: false, //afficher le bouton "partager sur linkedin"
 
 }
@@ -236,6 +237,7 @@ export const messages_fr = {
   //Si usage de Base de données, consentement
   home_nickname: "Quel est votre nom ou pseudo?",
   home_email: "Quel est votre email?",
+  home_email_wrong: "(mauvais format d'email)",
   home_start: "Démarrer la chasse!",
 
   //PAGE DES ZONES
@@ -270,6 +272,11 @@ export const messages_fr = {
   finish_cardcomment_content: "C'est optionnel, mais on adore les feedbacks! 😉",
   finish_cardcomment_button: "Envoyer le commentaire",
 
+  finish_scores_ok_message: "Bravo! Votre score est enregistré!",
+  finish_comments_ok_message: "Merci! Votre commentaire est enregistré!",
+  finish_scores_nok_message: "Oh oh... On n'arrive pas enregistrer le commentaire...",
+  finish_comments_nok_message: "Ouch... On n'arrive pas enregistrer votre score...",
+
   ranking_title: "Ranking",
   ranking_card_title: "Voici les joueurs les plus rapides!",
   ranking_card_content: "Félicications à tous pour avoir terminé le jeu 😉 (il faut peut-être attendre un peu que le ranking se mette à jour ou vider le cache)",
@@ -290,6 +297,7 @@ export const messages_en = {
   //Si usage de Base de données, consentement
   home_nickname: "What is your name or nickname?",
   home_email: "What is your email?",
+  home_email_wrong: "(wrong email format)",
   home_start: "Start the hunt!",
 
   //PAGE DES ZONES
@@ -323,6 +331,12 @@ export const messages_en = {
   finish_cardcomment_title: "Leave us a comment!",
   finish_cardcomment_content: "It is optional, but we do love feedback! 😉",
   finish_cardcomment_button: "Send the feedback",
+
+  finish_scores_ok_message: "Bravo! Your score has been saved.",
+  finish_comments_ok_message: "Thanks! Your comment is saved.",
+  finish_scores_nok_message: "Oh oh... We cannot save your comment...",
+  finish_comments_nok_message: "Ouch... We cannot save your score...",
+
 
   ranking_title: "Leaderboard",
   ranking_card_title: "These are the fastest players!",

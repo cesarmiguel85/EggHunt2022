@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n\n<ion-content [fullscreen]=\"true\">\n  <div id=\"containerflex\">\n\n    <ion-button *ngIf=\"mydata.lang==='fr'\" fill=\"outline\" (click)=\"switchLang('en')\" id=\"switch\" slot=\"end\">{{mydata.allmessages.switch_lang}}</ion-button>\n          <ion-button *ngIf=\"mydata.lang==='en'\" fill=\"outline\" (click)=\"switchLang('fr')\" id=\"switch\" slot=\"end\">{{mydata.allmessages.switch_lang}}</ion-button>\n    <div id=\"container\">\n\n      <ion-grid>\n        <ion-row class=\"ion-justify-content-center\">\n          <ion-col size-lg=\"8\" size-xs=\"12\">\n            <div>\n\n\n              <ion-card>\n\n                <img id=\"homelogo\" src=\"assets/images/HOME_LOGO.png\"/>\n                <ion-card-content>\n\n                  <ion-card-title>{{mydata.allmessages.home_title}}</ion-card-title>\n                  <p id=\"home_p\">{{mydata.allmessages.home_desc}}</p>\n                </ion-card-content>\n              </ion-card>\n\n              <ion-card *ngIf=\"mydata.allvariables.with_db\" class=\"cardform\">\n\n                <ion-card-content>\n\n                  <ion-list lines=\"full\" class=\"myform\">\n\n                    <ion-item>\n                      <ion-label position=\"stacked\">{{mydata.allmessages.home_nickname}}<ion-text color=\"danger\"> *</ion-text></ion-label>\n                      <ion-input required type=\"email\" [(ngModel)]=\"nickname\"></ion-input>\n                    </ion-item>\n                    <ion-item>\n                      <ion-label position=\"stacked\">{{mydata.allmessages.home_email}}<ion-text color=\"danger\"> *</ion-text></ion-label>\n                      <ion-input required type=\"email\" [(ngModel)]=\"email\"></ion-input>\n                    </ion-item>\n\n                  </ion-list>\n\n                  <div class=\"ion-padding\">\n                    <ion-button expand=\"block\" (click)=\"GoToAreaPage()\" class=\"ion-no-margin\" disabled=\"{{blockStart()}}\">{{mydata.allmessages.home_start}} <ion-spinner *ngIf=\"spinner\" name=\"bubbles\"></ion-spinner></ion-button>\n                  </div>\n                </ion-card-content>\n              </ion-card>\n\n              <ion-card *ngIf=\"!mydata.allvariables.with_db\">\n                <ion-card-content>\n                  <div class=\"ion-padding\">\n                    <ion-button expand=\"block\" (click)=\"GoToAreaPage()\" class=\"ion-no-margin\">{{mydata.allmessages.home_start}}<ion-spinner *ngIf=\"spinner\" name=\"bubbles\"></ion-spinner></ion-button>\n                  </div>\n                </ion-card-content>\n              </ion-card>\n              <div id=\"ranking\" *ngIf=\"mydata.allvariables.with_db\">\n                <ion-button color=\"success\" (click)=\"GoToRanking()\">{{ mydata.allmessages.finish_ranking }}</ion-button>\n              </div>\n\n\n            </div>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n\n\n\n\n\n      <div id=\"margin\" >\n\n      </div>\n    </div>\n    <div id=\"footer\"></div>\n  </div>\n</ion-content>\n";
+    __webpack_exports__["default"] = "\n\n<ion-content [fullscreen]=\"true\">\n  <div id=\"containerflex\">\n\n    <ion-button *ngIf=\"mydata.lang==='fr'\" fill=\"outline\" (click)=\"switchLang('en')\" id=\"switch\" slot=\"end\">{{mydata.allmessages.switch_lang}}</ion-button>\n          <ion-button *ngIf=\"mydata.lang==='en'\" fill=\"outline\" (click)=\"switchLang('fr')\" id=\"switch\" slot=\"end\">{{mydata.allmessages.switch_lang}}</ion-button>\n    <div id=\"container\">\n\n      <ion-grid>\n        <ion-row class=\"ion-justify-content-center\">\n          <ion-col size-lg=\"8\" size-xs=\"12\">\n            <div>\n\n\n              <ion-card>\n\n                <img id=\"homelogo\" src=\"assets/images/HOME_LOGO.png\"/>\n                <ion-card-content>\n\n                  <ion-card-title>{{mydata.allmessages.home_title}}</ion-card-title>\n                  <p id=\"home_p\">{{mydata.allmessages.home_desc}}</p>\n                </ion-card-content>\n              </ion-card>\n\n              <ion-card *ngIf=\"mydata.allvariables.with_db\" class=\"cardform\">\n\n                <ion-card-content>\n\n                  <ion-list lines=\"full\" class=\"myform\">\n\n                    <ion-item>\n                      <ion-label position=\"stacked\">{{mydata.allmessages.home_nickname}}<ion-text color=\"danger\"> *</ion-text></ion-label>\n                      <ion-input required type=\"email\" [(ngModel)]=\"nickname\"></ion-input>\n                    </ion-item>\n                    <ion-item>\n                      <ion-label position=\"stacked\">{{mydata.allmessages.home_email}}<ion-text color=\"danger\"> *</ion-text><ion-text color=\"danger\" *ngIf=\"isEmailNOK()\"> {{mydata.allmessages.home_email_wrong}}</ion-text></ion-label>\n                      <ion-input required type=\"email\" [(ngModel)]=\"email\"></ion-input>\n                    </ion-item>\n\n                  </ion-list>\n\n                  <div class=\"ion-padding\">\n                    <ion-button expand=\"block\" (click)=\"GoToAreaPage()\" class=\"ion-no-margin\" disabled=\"{{blockStart()}}\">{{mydata.allmessages.home_start}} <ion-spinner *ngIf=\"spinner\" name=\"bubbles\"></ion-spinner></ion-button>\n                  </div>\n                </ion-card-content>\n              </ion-card>\n\n              <ion-card *ngIf=\"!mydata.allvariables.with_db\">\n                <ion-card-content>\n                  <div class=\"ion-padding\">\n                    <ion-button expand=\"block\" (click)=\"GoToAreaPage()\" class=\"ion-no-margin\">{{mydata.allmessages.home_start}}<ion-spinner *ngIf=\"spinner\" name=\"bubbles\"></ion-spinner></ion-button>\n                  </div>\n                </ion-card-content>\n              </ion-card>\n              <div id=\"ranking\" *ngIf=\"mydata.allvariables.with_db\">\n                <ion-button color=\"success\" (click)=\"GoToRanking()\">{{ mydata.allmessages.finish_ranking }}</ion-button>\n              </div>\n\n\n            </div>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n\n\n\n\n\n      <div id=\"margin\" >\n\n      </div>\n    </div>\n    <div id=\"footer\"></div>\n  </div>\n</ion-content>\n";
     /***/
   },
 
@@ -222,14 +222,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "ngOnInit",
         value: function ngOnInit() {}
       }, {
+        key: "isEmailNOK",
+        value: function isEmailNOK() {
+          var regExp = /^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$/;
+
+          if (regExp.test(this.email)) {
+            if (this.email.indexOf(this.mydata.allvariables.valid_domain) >= 0) {
+              return false;
+            }
+          }
+
+          return true;
+        }
+      }, {
         key: "blockStart",
         value: function blockStart() {
           var regExp = /^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$/;
 
-          if (this.nickname.length > 1 && regExp.test(this.email)) {
-            if (this.email.indexOf(this.mydata.allvariables.valid_domain) >= 0) {
-              return false;
-            }
+          if (this.nickname.length > 1 && !this.isEmailNOK()) {
+            return false;
           }
 
           return true;
