@@ -71,14 +71,26 @@ export class HomePage {
    
   }
 
+  isEmailNOK() {
+
+    const regExp = /^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$/;
+
+    if (regExp.test(this.email)) {
+      if(this.email.indexOf(this.mydata.allvariables.valid_domain)>=0){
+        return false
+      }
+    }
+    return true;
+  }
+
   blockStart() {
 
     const regExp = /^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$/;
 
-    if (this.nickname.length>1 && regExp.test(this.email)) {
-      if(this.email.indexOf(this.mydata.allvariables.valid_domain)>=0){
-        return false
-      }
+    if (this.nickname.length>1 && !this.isEmailNOK()) {
+        
+      return false
+      
     }
     return true;
   }

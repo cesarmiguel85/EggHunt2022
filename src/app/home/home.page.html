@@ -34,7 +34,7 @@
                       <ion-input required type="email" [(ngModel)]="nickname"></ion-input>
                     </ion-item>
                     <ion-item>
-                      <ion-label position="stacked">{{mydata.allmessages.home_email}}<ion-text color="danger"> *</ion-text></ion-label>
+                      <ion-label position="stacked">{{mydata.allmessages.home_email}}<ion-text color="danger"> *</ion-text><ion-text color="danger" *ngIf="isEmailNOK()"> {{mydata.allmessages.home_email_wrong}}</ion-text></ion-label>
                       <ion-input required type="email" [(ngModel)]="email"></ion-input>
                     </ion-item>
 

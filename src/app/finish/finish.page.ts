@@ -79,9 +79,11 @@ export class FinishPage implements OnInit {
       // Http Headers
 
       let postData = {
+        "sheet": "Scores",
         "nickname": this.mydata.nickname,
         "email": this.mydata.email,
         "time": this.mydata.mytime,
+        "ok_message": this.mydata.allmessages.finish_scores_ok_message
       }
 
       console.log("Launching http request score");
@@ -107,7 +109,7 @@ export class FinishPage implements OnInit {
         })
         .catch(error => {
           console.log(error);
-          this.mydata.presentToastBottom("On n'arrive pas à enregistrer votre score... désolé...");
+          this.mydata.presentToastBottom(this.mydata.allmessages.finish_scores_nok_message);
           this.spinner=false;
         })
     }
@@ -164,15 +166,18 @@ export class FinishPage implements OnInit {
   sendFeedback() {
 
     let postData = {
+      "sheet": "Comments",
       "nickname": this.mydata.nickname,
       "email": this.mydata.email,
-      "comment": this.mycomment
+      "comment": this.mycomment,
+      "ok_message": this.mydata.allmessages.finish_comments_ok_message
+
     }
 
     console.log("Launching hhtp request comment");
 
 
-    this.mydata.requestPostJQForm(this.mydata.allvariables.db_endpoint_comment, postData)
+    this.mydata.requestPostJQForm(this.mydata.allvariables.db_endpoint_log, postData)
       .then(data => {
         console.log(data);
         console.log("DATA PARSED");
@@ -191,7 +196,7 @@ export class FinishPage implements OnInit {
       })
       .catch(error => {
         console.log(error);
-        this.mydata.presentToastBottom("On n'arrive pas à enregistrer votre commentaire... désolé :-(");
+        this.mydata.presentToastBottom(this.mydata.allmessages.finish_comments_nok_message);
         this.spinner=false;
       })
 
