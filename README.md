@@ -44,23 +44,27 @@ To read the data of "Scores" (Sheet1), publish the GSheet as csv (File>Publish t
 To write the data: open Apps Script from the GSheet (Extensions>Apps script)
 
 
-- **Create a file "scores.gs"**
+- **Create a file "log.gs"**
 
 ```
 function doPost(e) { 
 
-  var ggs = SpreadsheetApp.openById(ScriptProperties.getProperty('active'));
-  var sheet = ggs.getSheetByName("Scores");
+  var ss = SpreadsheetApp.openById(ScriptProperties.getProperty('active'));
+  
+  //get Sheet to write to
+  var mySheet = e.parameter["sheet"];
+  var sheet = ss.getSheetByName(mySheet);
 
-  //read headers
+  //read headers in Sheet
   var headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
 
-  //get next empty row and first cell
+  //Go to last row, first cell
   var nextRow = sheet.getLastRow();
   var cell = sheet.getRange('a1');
   var col = 0;
 
-  //loop headers, if header name matches key name: copy value
+  //loop through the headers and if a parameter name matches the header name insert the value
+  //date is inserted automatically with FR time and format
   for (i in headers){ 
     if (headers[i] == "date"){
       val = new Date().toLocaleString('fr-FR',{ timeZone: 'Europe/Paris' });
@@ -71,12 +75,13 @@ function doPost(e) {
     col++;
   }
 
-  //return ok=1 and some message
+  //response message (you can go further handling ok responses... here it is very basic with only ok=1)
   var json = {
       'ok':1, 
-      'message': "Données enregistrées." 
+      'message': e.parameter["ok_message"] 
   }; 
-  return ContentService.createTextOutput(JSON.stringify(json) ).setMimeType(ContentService.MimeType.JAVASCRIPT); 
+
+  return ContentService.createTextOutput(JSON.stringify(json) ).setMimeType(ContentService.MimeType.JSON); 
   
 }
 
@@ -89,15 +94,4 @@ function setUp() {
 Run the setUp function once to validate access to data.
 Deploy and use the address in variable db_endpoint_log
 
-
-- **Create a file "comments.gs"**
-
-Exactly the same file, just change the line to point to the new Sheet "Comments".
-
-```
-var sheet = ss.getSheetByName("Comments");
-
-```
-
-Deploy and use the address in variable db_endpoint_comment
 
