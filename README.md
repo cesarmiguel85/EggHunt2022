@@ -8,10 +8,10 @@ Demo:
 https://cesarmiguel85.github.io/EggHunt2020
 
 ## Technologies:
-* Ionic 5 / Angular 8.3.26
+* Ionic CLI 6.18.1 / Angular 8.3.26
 * JQuery 3.5
 * Photo Sphere Viewer for 360: https://photo-sphere-viewer.js.org/
-* Google Sheet as DB (Apps script for write)
+* Google Sheet as DB (Apps script for write based on Martin Hawksey's script)
 * Papaparse for GSheet DB read & parse
 
 ## Languages:
