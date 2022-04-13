@@ -9887,28 +9887,313 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
     var jsondata = [{
-      area: "Barcelona: Barri Gotic [Spain]",
+      area: "Acacias",
       type: 'image360',
       pictures: [{
-        url: 'assets/areas/VR_barcelona_barriogotico.jpg',
+        url: 'assets/areas/Acacias_5.jpg',
         default_lat: 0,
         default_fov: 38,
         rectangles: [{
-          code: 7,
+          code: 1,
           x: 3413,
           y: 2143,
           width: 30,
           height: 40
         }, {
-          code: 8,
+          code: 2,
           x: 5835,
           y: 2203,
           width: 30,
           height: 40
         }, {
-          code: 9,
+          code: 3,
           x: 1527,
           y: 1403,
+          width: 30,
+          height: 40
+        }, {
+          code: 4,
+          x: 3413,
+          y: 2143,
+          width: 30,
+          height: 40
+        }, {
+          code: 5,
+          x: 3413,
+          y: 2143,
+          width: 30,
+          height: 40
+        }]
+      }]
+    }, {
+      area: "Arcueil",
+      type: 'image360',
+      pictures: [{
+        url: 'assets/areas/Arcueil_5.jpg',
+        default_lat: 0,
+        default_fov: 38,
+        rectangles: [{
+          code: 11,
+          x: 1917,
+          y: 2233,
+          width: 30,
+          height: 40
+        }, {
+          code: 12,
+          x: 590,
+          y: 2102,
+          width: 30,
+          height: 40
+        }, {
+          code: 13,
+          x: 5081,
+          y: 2152,
+          width: 30,
+          height: 40
+        }, {
+          code: 14,
+          x: 1917,
+          y: 2233,
+          width: 30,
+          height: 40
+        }, {
+          code: 15,
+          x: 1917,
+          y: 2033,
+          width: 30,
+          height: 40
+        }]
+      }]
+    }, {
+      area: "Bayen - Reception",
+      type: 'image360',
+      pictures: [{
+        url: 'assets/areas/Bayen_5.jpg',
+        default_lat: 0,
+        default_fov: 38,
+        rectangles: [{
+          code: 21,
+          x: 1917,
+          y: 2233,
+          width: 30,
+          height: 40
+        }, {
+          code: 22,
+          x: 590,
+          y: 2102,
+          width: 30,
+          height: 40
+        }, {
+          code: 23,
+          x: 5081,
+          y: 2152,
+          width: 30,
+          height: 40
+        }, {
+          code: 24,
+          x: 1917,
+          y: 2233,
+          width: 30,
+          height: 40
+        }, {
+          code: 25,
+          x: 1917,
+          y: 2033,
+          width: 30,
+          height: 40
+        }]
+      }]
+    }, {
+      area: "Bayen - Open Space",
+      type: 'image360',
+      pictures: [{
+        url: 'assets/areas/Open_space_Bayen_5.jpg',
+        default_lat: 0,
+        default_fov: 38,
+        rectangles: [{
+          code: 31,
+          x: 1917,
+          y: 2233,
+          width: 30,
+          height: 40
+        }, {
+          code: 32,
+          x: 590,
+          y: 2102,
+          width: 30,
+          height: 40
+        }, {
+          code: 33,
+          x: 5081,
+          y: 2152,
+          width: 30,
+          height: 40
+        }, {
+          code: 34,
+          x: 1917,
+          y: 2233,
+          width: 30,
+          height: 40
+        }, {
+          code: 35,
+          x: 1917,
+          y: 2033,
+          width: 30,
+          height: 40
+        }]
+      }]
+    }, {
+      area: "Square",
+      type: 'image360',
+      pictures: [{
+        url: 'assets/areas/Square_5.jpg',
+        default_lat: 0,
+        default_fov: 38,
+        rectangles: [{
+          code: 41,
+          x: 1917,
+          y: 2233,
+          width: 30,
+          height: 40
+        }, {
+          code: 42,
+          x: 590,
+          y: 2102,
+          width: 30,
+          height: 40
+        }, {
+          code: 43,
+          x: 5081,
+          y: 2152,
+          width: 30,
+          height: 40
+        }, {
+          code: 44,
+          x: 1917,
+          y: 2233,
+          width: 30,
+          height: 40
+        }, {
+          code: 45,
+          x: 1917,
+          y: 2033,
+          width: 30,
+          height: 40
+        }]
+      }]
+    }, {
+      area: "STO1 - Charge",
+      type: 'image360',
+      pictures: [{
+        url: 'assets/areas/STO1_charge_5.jpg',
+        default_lat: 0,
+        default_fov: 38,
+        rectangles: [{
+          code: 51,
+          x: 1917,
+          y: 2233,
+          width: 30,
+          height: 40
+        }, {
+          code: 52,
+          x: 590,
+          y: 2102,
+          width: 30,
+          height: 40
+        }, {
+          code: 53,
+          x: 5081,
+          y: 2152,
+          width: 30,
+          height: 40
+        }, {
+          code: 54,
+          x: 1917,
+          y: 2233,
+          width: 30,
+          height: 40
+        }, {
+          code: 55,
+          x: 1917,
+          y: 2033,
+          width: 30,
+          height: 40
+        }]
+      }]
+    }, {
+      area: "STO1 - Repos",
+      type: 'image360',
+      pictures: [{
+        url: 'assets/areas/STO1_repos_5.jpg',
+        default_lat: 0,
+        default_fov: 38,
+        rectangles: [{
+          code: 61,
+          x: 1917,
+          y: 2233,
+          width: 30,
+          height: 40
+        }, {
+          code: 62,
+          x: 590,
+          y: 2102,
+          width: 30,
+          height: 40
+        }, {
+          code: 63,
+          x: 5081,
+          y: 2152,
+          width: 30,
+          height: 40
+        }, {
+          code: 64,
+          x: 1917,
+          y: 2233,
+          width: 30,
+          height: 40
+        }, {
+          code: 65,
+          x: 1917,
+          y: 2033,
+          width: 30,
+          height: 40
+        }]
+      }]
+    }, {
+      area: "STO2",
+      type: 'image360',
+      pictures: [{
+        url: 'assets/areas/STO1_charge_5.jpg',
+        default_lat: 0,
+        default_fov: 38,
+        rectangles: [{
+          code: 71,
+          x: 1917,
+          y: 2233,
+          width: 30,
+          height: 40
+        }, {
+          code: 72,
+          x: 590,
+          y: 2102,
+          width: 30,
+          height: 40
+        }, {
+          code: 73,
+          x: 5081,
+          y: 2152,
+          width: 30,
+          height: 40
+        }, {
+          code: 74,
+          x: 1917,
+          y: 2233,
+          width: 30,
+          height: 40
+        }, {
+          code: 75,
+          x: 1917,
+          y: 2033,
           width: 30,
           height: 40
         }]
@@ -9919,9 +10204,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       //Si pas de base de données (false), toutes lesoptions sur l'app seront desactivée
       with_db: true,
       valid_domain: "",
-      //db_endpoint_log: "https://nodered.cesarmiguel.duckdns.org/EggHunt2022/log",
       db_endpoint_log: "https://script.google.com/macros/s/AKfycbyFnJzyDg049e8aIBj-kZa8_967HGn6pOR8-ZR5QjkXcvX1Y5nyrx0bwYrCwiPMtcyU/exec",
-      //db_endpoint_comment: "https://nodered.cesarmiguel.duckdns.org/EggHunt2022/comment",
       db_id_scores: "Scores",
       db_id_comments: "Comments",
       db_token: "QAZPLM1209WSXOKN",
@@ -9999,7 +10282,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       //Message oeufs restants
       areas_remaining: "Remaining Eggs: ",
       //PAGE DES IMAGES
-      imageviewer_title: "Place: ",
+      imageviewer_title: "Location: ",
       imageviewer_found: "Eggs: ",
       //Messages lors des click sur les oeufs (ok: nouvel, nok: deja trouvé)
       imageviewer_addegg_ok: "You found a new egg! Good job!",

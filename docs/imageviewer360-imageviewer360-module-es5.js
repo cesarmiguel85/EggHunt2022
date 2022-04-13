@@ -33,7 +33,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-back-button defaultHref=\"home\"></ion-back-button>\n    </ion-buttons>\n    <ion-title><span hideWhen=\"mobile,mobileweb\">{{ mydata.allmessages.imageviewer_title }} </span>{{mydata.alldata[area].area}}!</ion-title>\n    <ion-title slot=\"end\">{{ mydata.allmessages.imageviewer_found }} {{total-remaining}}/{{total}}</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <div id=\"photosphere\"></div>\n</ion-content>\n";
+    __webpack_exports__["default"] = "<ion-header>\r\n  <ion-toolbar>\r\n    <ion-buttons slot=\"start\">\r\n      <ion-back-button defaultHref=\"home\"></ion-back-button>\r\n    </ion-buttons>\r\n    <ion-title><span hideWhen=\"mobile,mobileweb\">{{ mydata.allmessages.imageviewer_title }} </span>{{mydata.alldata[area].area}}!</ion-title>\r\n    <ion-title slot=\"end\">{{ mydata.allmessages.imageviewer_found }} {{total-remaining}}/{{total}}</ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n  <div id=\"photosphere\"></div>\r\n</ion-content>\r\n";
     /***/
   },
 
@@ -186,7 +186,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "#photosphere {\n  background: #DDD;\n  width: 100%;\n  height: 100%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9jZXNhci9Eb2N1bWVudHMvRGV2ZWxvcG1lbnQvRWdnSHVudDIwMjIvc3JjL2FwcC9pbWFnZXZpZXdlcjM2MC9pbWFnZXZpZXdlcjM2MC5wYWdlLnNjc3MiLCJzcmMvYXBwL2ltYWdldmlld2VyMzYwL2ltYWdldmlld2VyMzYwLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGdCQUFBO0VBQ0EsV0FBQTtFQUNBLFlBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL2ltYWdldmlld2VyMzYwL2ltYWdldmlld2VyMzYwLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIiNwaG90b3NwaGVyZSB7XG4gICAgYmFja2dyb3VuZDojREREO1xuICAgIHdpZHRoOjEwMCU7XG4gICAgaGVpZ2h0OjEwMCU7XG4gIH1cblxuICAiLCIjcGhvdG9zcGhlcmUge1xuICBiYWNrZ3JvdW5kOiAjREREO1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAxMDAlO1xufSJdfQ== */";
+    __webpack_exports__["default"] = "#photosphere {\n  background: #DDD;\n  width: 100%;\n  height: 100%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaW1hZ2V2aWV3ZXIzNjAvQzpcXFVzZXJzXFxDZXNhck1pZ3VlbFxcRG9jdW1lbnRzXFxHaXRIdWJcXEVnZ0h1bnQyMDIyL3NyY1xcYXBwXFxpbWFnZXZpZXdlcjM2MFxcaW1hZ2V2aWV3ZXIzNjAucGFnZS5zY3NzIiwic3JjL2FwcC9pbWFnZXZpZXdlcjM2MC9pbWFnZXZpZXdlcjM2MC5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxnQkFBQTtFQUNBLFdBQUE7RUFDQSxZQUFBO0FDQ0oiLCJmaWxlIjoic3JjL2FwcC9pbWFnZXZpZXdlcjM2MC9pbWFnZXZpZXdlcjM2MC5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIjcGhvdG9zcGhlcmUge1xyXG4gICAgYmFja2dyb3VuZDojREREO1xyXG4gICAgd2lkdGg6MTAwJTtcclxuICAgIGhlaWdodDoxMDAlO1xyXG4gIH1cclxuXHJcbiAgIiwiI3Bob3Rvc3BoZXJlIHtcbiAgYmFja2dyb3VuZDogI0RERDtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbn0iXX0= */";
     /***/
   },
 
