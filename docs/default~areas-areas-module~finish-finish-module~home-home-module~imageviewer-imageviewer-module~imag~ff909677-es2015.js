@@ -11129,34 +11129,34 @@ const jsondata = [
                 default_fov: 38,
                 rectangles: [{
                         code: 1,
-                        x: 3413,
-                        y: 2143,
+                        x: 315,
+                        y: 1801,
                         width: 30,
                         height: 40
                     },
                     {
                         code: 2,
-                        x: 5835,
-                        y: 2203,
+                        x: 2308,
+                        y: 1492,
                         width: 30,
                         height: 40
                     },
                     {
                         code: 3,
-                        x: 1527,
-                        y: 1403,
+                        x: 3383,
+                        y: 1742,
                         width: 30,
                         height: 40
                     }, {
                         code: 4,
-                        x: 3413,
-                        y: 2143,
+                        x: 4102,
+                        y: 1794,
                         width: 30,
                         height: 40
                     }, {
                         code: 5,
-                        x: 3413,
-                        y: 2143,
+                        x: 5700,
+                        y: 1435,
                         width: 30,
                         height: 40
                     }]
@@ -11172,77 +11172,34 @@ const jsondata = [
                 default_fov: 38,
                 rectangles: [{
                         code: 11,
-                        x: 1917,
-                        y: 2233,
+                        x: 4331,
+                        y: 1753,
                         width: 30,
                         height: 40
                     },
                     {
                         code: 12,
-                        x: 590,
-                        y: 2102,
+                        x: 4779,
+                        y: 1848,
                         width: 30,
                         height: 40
                     },
                     {
                         code: 13,
-                        x: 5081,
-                        y: 2152,
+                        x: 5536,
+                        y: 1927,
                         width: 30,
                         height: 40
                     }, {
                         code: 14,
-                        x: 1917,
-                        y: 2233,
+                        x: 880,
+                        y: 2025,
                         width: 30,
                         height: 40
                     }, {
                         code: 15,
-                        x: 1917,
-                        y: 2033,
-                        width: 30,
-                        height: 40
-                    }]
-            }
-        ]
-    },
-    {
-        area: "Bayen - Reception",
-        type: 'image360',
-        pictures: [{
-                url: 'assets/areas/Bayen_5.jpg',
-                default_lat: 0,
-                default_fov: 38,
-                rectangles: [{
-                        code: 21,
-                        x: 1917,
-                        y: 2233,
-                        width: 30,
-                        height: 40
-                    },
-                    {
-                        code: 22,
-                        x: 590,
-                        y: 2102,
-                        width: 30,
-                        height: 40
-                    },
-                    {
-                        code: 23,
-                        x: 5081,
-                        y: 2152,
-                        width: 30,
-                        height: 40
-                    }, {
-                        code: 24,
-                        x: 1917,
-                        y: 2233,
-                        width: 30,
-                        height: 40
-                    }, {
-                        code: 25,
-                        x: 1917,
-                        y: 2033,
+                        x: 927,
+                        y: 1285,
                         width: 30,
                         height: 40
                     }]
@@ -11258,34 +11215,34 @@ const jsondata = [
                 default_fov: 38,
                 rectangles: [{
                         code: 31,
-                        x: 1917,
-                        y: 2233,
+                        x: 3169,
+                        y: 1631,
                         width: 30,
                         height: 40
                     },
                     {
                         code: 32,
-                        x: 590,
-                        y: 2102,
+                        x: 4368,
+                        y: 1518,
                         width: 30,
                         height: 40
                     },
                     {
                         code: 33,
-                        x: 5081,
-                        y: 2152,
+                        x: 1024,
+                        y: 1560,
                         width: 30,
                         height: 40
                     }, {
                         code: 34,
-                        x: 1917,
-                        y: 2233,
+                        x: 1560,
+                        y: 1883,
                         width: 30,
                         height: 40
                     }, {
                         code: 35,
-                        x: 1917,
-                        y: 2033,
+                        x: 2429,
+                        y: 1822,
                         width: 30,
                         height: 40
                     }]
@@ -11293,7 +11250,7 @@ const jsondata = [
         ]
     },
     {
-        area: "Square",
+        area: "Le Square",
         type: 'image360',
         pictures: [{
                 url: 'assets/areas/Square_5.jpg',
@@ -11301,34 +11258,34 @@ const jsondata = [
                 default_fov: 38,
                 rectangles: [{
                         code: 41,
-                        x: 1917,
-                        y: 2233,
+                        x: 2880,
+                        y: 1491,
                         width: 30,
                         height: 40
                     },
                     {
                         code: 42,
-                        x: 590,
-                        y: 2102,
+                        x: 3792,
+                        y: 1254,
                         width: 30,
                         height: 40
                     },
                     {
                         code: 43,
-                        x: 5081,
-                        y: 2152,
+                        x: 4793,
+                        y: 1487,
                         width: 30,
                         height: 40
                     }, {
                         code: 44,
-                        x: 1917,
-                        y: 2233,
+                        x: 396,
+                        y: 1726,
                         width: 30,
                         height: 40
                     }, {
                         code: 45,
-                        x: 1917,
-                        y: 2033,
+                        x: 1767,
+                        y: 1577,
                         width: 30,
                         height: 40
                     }]
@@ -11344,77 +11301,34 @@ const jsondata = [
                 default_fov: 38,
                 rectangles: [{
                         code: 51,
-                        x: 1917,
-                        y: 2233,
+                        x: 2595,
+                        y: 1689,
                         width: 30,
                         height: 40
                     },
                     {
                         code: 52,
-                        x: 590,
-                        y: 2102,
+                        x: 3179,
+                        y: 1785,
                         width: 30,
                         height: 40
                     },
                     {
                         code: 53,
-                        x: 5081,
-                        y: 2152,
+                        x: 4972,
+                        y: 1744,
                         width: 30,
                         height: 40
                     }, {
                         code: 54,
-                        x: 1917,
-                        y: 2233,
+                        x: 187,
+                        y: 1535,
                         width: 30,
                         height: 40
                     }, {
                         code: 55,
-                        x: 1917,
-                        y: 2033,
-                        width: 30,
-                        height: 40
-                    }]
-            }
-        ]
-    },
-    {
-        area: "STO1 - Repos",
-        type: 'image360',
-        pictures: [{
-                url: 'assets/areas/STO1_repos_5.jpg',
-                default_lat: 0,
-                default_fov: 38,
-                rectangles: [{
-                        code: 61,
-                        x: 1917,
-                        y: 2233,
-                        width: 30,
-                        height: 40
-                    },
-                    {
-                        code: 62,
-                        x: 590,
-                        y: 2102,
-                        width: 30,
-                        height: 40
-                    },
-                    {
-                        code: 63,
-                        x: 5081,
-                        y: 2152,
-                        width: 30,
-                        height: 40
-                    }, {
-                        code: 64,
-                        x: 1917,
-                        y: 2233,
-                        width: 30,
-                        height: 40
-                    }, {
-                        code: 65,
-                        x: 1917,
-                        y: 2033,
+                        x: 1599,
+                        y: 1801,
                         width: 30,
                         height: 40
                     }]
@@ -11425,39 +11339,39 @@ const jsondata = [
         area: "STO2",
         type: 'image360',
         pictures: [{
-                url: 'assets/areas/STO1_charge_5.jpg',
+                url: 'assets/areas/STO2_5.jpg',
                 default_lat: 0,
                 default_fov: 38,
                 rectangles: [{
                         code: 71,
-                        x: 1917,
-                        y: 2233,
+                        x: 2498,
+                        y: 1536,
                         width: 30,
                         height: 40
                     },
                     {
                         code: 72,
-                        x: 590,
-                        y: 2102,
+                        x: 3963,
+                        y: 1851,
                         width: 30,
                         height: 40
                     },
                     {
                         code: 73,
-                        x: 5081,
-                        y: 2152,
+                        x: 5193,
+                        y: 1679,
                         width: 30,
                         height: 40
                     }, {
                         code: 74,
-                        x: 1917,
-                        y: 2233,
+                        x: 5630,
+                        y: 1534,
                         width: 30,
                         height: 40
                     }, {
                         code: 75,
-                        x: 1917,
-                        y: 2033,
+                        x: 689,
+                        y: 1883,
                         width: 30,
                         height: 40
                     }]
@@ -11484,43 +11398,43 @@ const messages_fr = {
     //PAGE D'ACCUEIL
     home_title: "Bienvenue à la chasse aux oeufs de Pâques",
     home_subtitle: "",
-    home_desc: "Ce n'est pas parce que nous sommes confinés que nous ne pouvons pas maintenir l'esprit des activités!\n En prenant plusieurs idées d'ici et de là, profitant d'un side-project personnel avec mon collègue Andres, je vous propose une chasse aux oeufs de Pâques autour du monde en mode 'évasion'. J'ai rassemblé les quelques photos 360 de mes derniers voyages (elles pourraient être plus adaptées pour ceci, mais je n'avais jamais pensé faire ce jeu quand je les avais prises). J'ai caché des oeufs dans les images qu'il faudra retrouver.\n\nUne occasion pour partager avec vous des endroits magnifiques de façon ludique 😉\n\nCesar MIGUEL\n(Un merci spécial à Manu qui a pris beaucoup d'entre elles!)",
+    home_desc: "En 2022, la chasse aux oeufs de Pâques c'est virtuel. Mais les oeufs en chocolat sont réels 🤩 ! \n Trouve les 5 oeufs cachés sur chaque image, ton temps est compté. Les 3 plus rapides seront récompensés, mais ne t'inquiète pas il y a du chocolat 🍫 pour tout le monde 😊 \n Un grand merci à Cesar qui a créé ce jeu (talent de codeur non négligeable 👾) ",
     //Si usage de Base de données, consentement
-    home_nickname: "Quel est votre nom ou pseudo?",
-    home_email: "Quel est votre email?",
+    home_nickname: "Quel est ton nom (Prénom NOM) ?",
+    home_email: "Quel est ton email ?",
     home_email_wrong: "(mauvais format d'email)",
     home_start: "Démarrer la chasse!",
     //PAGE DES ZONES
     areas_title: "Chasse aux Oeufs de Pâques",
     //Carte de description du jeu
     areas_card_title: "C'est parti!",
-    areas_card_desc: "Explorez chaque endroit puis cliquez sur les œufs pour les attraper dès que vous les verrez. \nIls sont colorés et pas trop compliqués à trouver, promis 😉(cherchez par terre ou entre les mains des gens, comme dans la vraie vie!)",
+    areas_card_desc: "Explore les sites Cityscoot puis clique sur les œufs pour les attraper dès que tu les as trouvé. \nIls sont colorés et pas trop compliqués à trouver, promis 😉 ",
     //Message quand tous les oeufs sont trouvés
-    areas_checkdone: "Vous avez trouvé tous les oeufs de cet endroit, félicitations!",
+    areas_checkdone: "Tu as trouvé tous les oeufs de cet endroit, félicitations!",
     //Message oeufs restants
     areas_remaining: "Oeufs restants: ",
     //PAGE DES IMAGES
     imageviewer_title: "Lieu: ",
     imageviewer_found: "Oeufs: ",
     //Messages lors des click sur les oeufs (ok: nouvel, nok: deja trouvé)
-    imageviewer_addegg_ok: "Vous avez trouvé un nouvel oeuf! Good job!",
-    imageviewer_addegg_nok: "Vous avez déjà cet oeuf!",
+    imageviewer_addegg_ok: "Tu as trouvé un nouvel oeuf! Good job!",
+    imageviewer_addegg_nok: "Tu as déjà cet oeuf!",
     //PAGE DE FIN DU JEU
     finish_title: "FÉLICITATIONS!",
-    finish_card_title: "Vous avez trouvé tous les oeufs!",
-    finish_card_content: "J'espère que vous avez apprécié ce jeu et il vous a permis de vous évader ne serait-ce que quelques minutes!\n\nPeut-être vous avez des idées pour les prochaines vacances? 😉\n\nCesar MIGUEL",
-    finish_cardtime_title: "Voici votre score",
-    finish_cardtime_content: "Vous avez terminé ce jeu en ",
+    finish_card_title: "Tu as trouvé tous les oeufs!",
+    finish_card_content: "J'espère que tu as apprécié ce jeu, rapproche toi de ton chef de site pour avoir les vrais oeufs en chocolat. \n\nOn contactera les 3 temps les plus rapides pour un cadeau!",
+    finish_cardtime_title: "Voici ton score",
+    finish_cardtime_content: "Tu as terminé ce jeu en ",
     finish_ranking: "Consulter le ranking",
     finish_cardtime_saving: "",
     finish_quit: "Quitter",
-    finish_cardcomment_title: "Laissez-nous un commentaire!",
+    finish_cardcomment_title: "Laisse-nous un commentaire!",
     finish_cardcomment_content: "C'est optionnel, mais on adore les feedbacks! 😉",
     finish_cardcomment_button: "Envoyer le commentaire",
     finish_scores_ok_message: "Bravo! Votre score est enregistré!",
-    finish_comments_ok_message: "Merci! Votre commentaire est enregistré!",
+    finish_comments_ok_message: "Merci! Ton commentaire est enregistré!",
     finish_scores_nok_message: "Oh oh... On n'arrive pas enregistrer le commentaire...",
-    finish_comments_nok_message: "Ouch... On n'arrive pas enregistrer votre score...",
+    finish_comments_nok_message: "Ouch... On n'arrive pas enregistrer ton score...",
     ranking_title: "Ranking",
     ranking_card_title: "Voici les joueurs les plus rapides!",
     ranking_card_content: "Félicications à tous pour avoir terminé le jeu 😉 (il faut peut-être attendre un peu que le ranking se mette à jour ou vider le cache)",
@@ -11528,52 +11442,52 @@ const messages_fr = {
     ranking_empty: "Il semblerait qu'il n'y a pas encore eu de joeurs..."
 };
 const messages_en = {
-    switch_lang: "CHANGER AU FRANÇAIS",
+    switch_lang: "SWITCH TO ENGLISH",
     //PAGE D'ACCUEIL
-    home_title: "Welcome to the Easter Egg Hunt",
+    home_title: "Bienvenue à la chasse aux oeufs de Pâques",
     home_subtitle: "",
-    home_desc: "The confinement should not prevent us from enjoying the essence of some pleasures!\n Borrowing some ideas from here and there, and thanks to a side-project with my colleague Andres, I present to you a virtual Easter Egg Hunt around travel and mind 'evasion'. I have gathered the 360º images from my past travels (they are not the best pictures for this, but I never expected I would use them for this purpose!). I hid some Easter Eggs in the image that you will have to find.\n\n This is an occasion to daydream and share with you some amazing places in a playful way 😉\n\nCesar MIGUEL\n(Special thanks to Manu who took most of these pictures!)",
+    home_desc: "En 2022, la chasse aux oeufs de Pâques c'est virtuel. Mais les oeufs en chocolat sont réels 🤩 ! \n Trouve les 5 oeufs cachés sur chaque image, ton temps est compté. Les 3 plus rapides seront récompensés, mais ne t'inquiète pas il y a du chocolat 🍫 pour tout le monde 😊 \n Un grand merci à Cesar qui a créé ce jeu (talent de codeur non négligeable 👾) ",
     //Si usage de Base de données, consentement
-    home_nickname: "What is your name or nickname?",
-    home_email: "What is your email?",
-    home_email_wrong: "(wrong email format)",
-    home_start: "Start the hunt!",
+    home_nickname: "Quel est ton nom (Prénom NOM) ?",
+    home_email: "Quel est ton email ?",
+    home_email_wrong: "(mauvais format d'email)",
+    home_start: "Démarrer la chasse!",
     //PAGE DES ZONES
-    areas_title: "Easter Egg Hunt",
+    areas_title: "Chasse aux Oeufs de Pâques",
     //Carte de description du jeu
-    areas_card_title: "Let's go!",
-    areas_card_desc: "Explore the places and look for the hidden eggs. Once you find them, click on them to catch them. \n They are colorful and easy to find, I promise 😉 (look on the ground or in people's hands, like real life!)",
+    areas_card_title: "C'est parti!",
+    areas_card_desc: "Explore les sites Cityscoot puis clique sur les œufs pour les attraper dès que tu les as trouvé. \nIls sont colorés et pas trop compliqués à trouver, promis 😉 ",
     //Message quand tous les oeufs sont trouvés
-    areas_checkdone: "You found all the eggs in the area, congratulations!",
+    areas_checkdone: "Tu as trouvé tous les oeufs de cet endroit, félicitations!",
     //Message oeufs restants
-    areas_remaining: "Remaining Eggs: ",
+    areas_remaining: "Oeufs restants: ",
     //PAGE DES IMAGES
-    imageviewer_title: "Location: ",
-    imageviewer_found: "Eggs: ",
+    imageviewer_title: "Lieu: ",
+    imageviewer_found: "Oeufs: ",
     //Messages lors des click sur les oeufs (ok: nouvel, nok: deja trouvé)
-    imageviewer_addegg_ok: "You found a new egg! Good job!",
-    imageviewer_addegg_nok: "You already have this one!",
+    imageviewer_addegg_ok: "Tu as trouvé un nouvel oeuf! Good job!",
+    imageviewer_addegg_nok: "Tu as déjà cet oeuf!",
     //PAGE DE FIN DU JEU
-    finish_title: "CONGRATULATIONS!",
-    finish_card_title: "You found all the hidden Easter eggs!",
-    finish_card_content: "I hope you liked this little game and I wish it took your mind off the confinementor a second. \n\n Maybe you found your next holiday destination ? 😉\n\nCesar MIGUEL",
-    finish_cardtime_title: "This is your score",
-    finish_cardtime_content: "You finished the game in ",
-    finish_ranking: "Check out the ranking",
+    finish_title: "FÉLICITATIONS!",
+    finish_card_title: "Tu as trouvé tous les oeufs!",
+    finish_card_content: "J'espère que tu as apprécié ce jeu, rapproche toi de ton chef de site pour avoir les vrais oeufs en chocolat. \n\nOn contactera les 3 temps les plus rapides pour un cadeau!",
+    finish_cardtime_title: "Voici ton score",
+    finish_cardtime_content: "Tu as terminé ce jeu en ",
+    finish_ranking: "Consulter le ranking",
     finish_cardtime_saving: "",
-    finish_quit: "Quit",
-    finish_cardcomment_title: "Leave us a comment!",
-    finish_cardcomment_content: "It is optional, but we do love feedback! 😉",
-    finish_cardcomment_button: "Send the feedback",
-    finish_scores_ok_message: "Bravo! Your score has been saved.",
-    finish_comments_ok_message: "Thanks! Your comment is saved.",
-    finish_scores_nok_message: "Oh oh... We cannot save your comment...",
-    finish_comments_nok_message: "Ouch... We cannot save your score...",
-    ranking_title: "Leaderboard",
-    ranking_card_title: "These are the fastest players!",
-    ranking_card_content: "Congratulations to all for finishing 😉 (it might take some minutes so refresh or you might have to empty the cache",
-    ranking_table_header: ["Nane/Nickname", "Email", "Time (s)"],
-    ranking_empty: "It seems there are no players yet..."
+    finish_quit: "Quitter",
+    finish_cardcomment_title: "Laisse-nous un commentaire!",
+    finish_cardcomment_content: "C'est optionnel, mais on adore les feedbacks! 😉",
+    finish_cardcomment_button: "Envoyer le commentaire",
+    finish_scores_ok_message: "Bravo! Votre score est enregistré!",
+    finish_comments_ok_message: "Merci! Ton commentaire est enregistré!",
+    finish_scores_nok_message: "Oh oh... On n'arrive pas enregistrer le commentaire...",
+    finish_comments_nok_message: "Ouch... On n'arrive pas enregistrer ton score...",
+    ranking_title: "Ranking",
+    ranking_card_title: "Voici les joueurs les plus rapides!",
+    ranking_card_content: "Félicications à tous pour avoir terminé le jeu 😉 (il faut peut-être attendre un peu que le ranking se mette à jour ou vider le cache)",
+    ranking_table_header: ["Nom/Pseudo", "Email", "Temps (s)"],
+    ranking_empty: "Il semblerait qu'il n'y a pas encore eu de joeurs..."
 };
 
 
