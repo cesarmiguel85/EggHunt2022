@@ -5,10 +5,7 @@
 
 
 export const jsondata = [
-{
-  area: "Acacias",
-  type: 'image360',
-  pictures: [{
+  {
     area: "STO1 - Charge",
     type: 'image360',
     pictures: [{
@@ -53,7 +50,11 @@ export const jsondata = [
       
     ]
     
-  },{
+  },
+{
+  area: "Acacias",
+  type: 'image360',
+  pictures: [{
       url: 'assets/areas/Acacias_5.jpg',
       default_lat: 0,
       default_fov: 38,
@@ -141,7 +142,10 @@ export const jsondata = [
 {
   area: "Bayen - Open Space",
   type: 'image360',
-  pictures: [{
+  pictures: [
+    
+    
+    {
       url: 'assets/areas/Open_space_Bayen_5.jpg',
       default_lat: 0,
       default_fov: 38,
