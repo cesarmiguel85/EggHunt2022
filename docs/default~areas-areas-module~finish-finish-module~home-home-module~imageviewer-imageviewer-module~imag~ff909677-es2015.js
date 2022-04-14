@@ -11124,6 +11124,48 @@ const jsondata = [
         area: "Acacias",
         type: 'image360',
         pictures: [{
+                area: "STO1 - Charge",
+                type: 'image360',
+                pictures: [{
+                        url: 'assets/areas/STO1_charge_5.jpg',
+                        default_lat: 0,
+                        default_fov: 38,
+                        rectangles: [{
+                                code: 51,
+                                x: 2595,
+                                y: 1689,
+                                width: 30,
+                                height: 40
+                            },
+                            {
+                                code: 52,
+                                x: 3179,
+                                y: 1785,
+                                width: 30,
+                                height: 40
+                            },
+                            {
+                                code: 53,
+                                x: 4972,
+                                y: 1744,
+                                width: 30,
+                                height: 40
+                            }, {
+                                code: 54,
+                                x: 187,
+                                y: 1535,
+                                width: 30,
+                                height: 40
+                            }, {
+                                code: 55,
+                                x: 1599,
+                                y: 1801,
+                                width: 30,
+                                height: 40
+                            }]
+                    }
+                ]
+            }, {
                 url: 'assets/areas/Acacias_5.jpg',
                 default_lat: 0,
                 default_fov: 38,
@@ -11286,49 +11328,6 @@ const jsondata = [
                         code: 45,
                         x: 1767,
                         y: 1577,
-                        width: 30,
-                        height: 40
-                    }]
-            }
-        ]
-    },
-    {
-        area: "STO1 - Charge",
-        type: 'image360',
-        pictures: [{
-                url: 'assets/areas/STO1_charge_5.jpg',
-                default_lat: 0,
-                default_fov: 38,
-                rectangles: [{
-                        code: 51,
-                        x: 2595,
-                        y: 1689,
-                        width: 30,
-                        height: 40
-                    },
-                    {
-                        code: 52,
-                        x: 3179,
-                        y: 1785,
-                        width: 30,
-                        height: 40
-                    },
-                    {
-                        code: 53,
-                        x: 4972,
-                        y: 1744,
-                        width: 30,
-                        height: 40
-                    }, {
-                        code: 54,
-                        x: 187,
-                        y: 1535,
-                        width: 30,
-                        height: 40
-                    }, {
-                        code: 55,
-                        x: 1599,
-                        y: 1801,
                         width: 30,
                         height: 40
                     }]
