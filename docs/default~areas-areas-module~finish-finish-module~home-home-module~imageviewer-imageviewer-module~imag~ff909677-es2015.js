@@ -10984,7 +10984,7 @@ let DataService = class DataService {
             //this.presentToast(this.allmessages.imageviewer_addegg_nok);
         }
         else {
-            this.presentToast(this.allmessages.imageviewer_addegg_ok);
+            this.presentToast(this.allmessages.imageviewer_addegg_ok, 1000);
             this.myeggs.push(num);
             if (this.verbose)
                 console.log(this.myeggs);
@@ -10994,11 +10994,15 @@ let DataService = class DataService {
     iHaveIt(eggcode) {
         return this.myeggs.indexOf(eggcode) >= 0;
     }
-    presentToast(message) {
+    presentToast(message, timer) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            var mytime = 3000;
+            if (typeof timer !== 'undefined') {
+                mytime = timer;
+            }
             const toast = yield this.toastController.create({
                 message: message,
-                duration: 3000,
+                duration: mytime,
                 position: 'middle',
             });
             toast.present();

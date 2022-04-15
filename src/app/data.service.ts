@@ -119,7 +119,7 @@ export class DataService {
     }
     else {
 
-      this.presentToast(this.allmessages.imageviewer_addegg_ok);
+      this.presentToast(this.allmessages.imageviewer_addegg_ok, 1000);
       this.myeggs.push(num);
       if(this.verbose) console.log(this.myeggs);
       this.checkDone(area);
@@ -131,10 +131,17 @@ export class DataService {
     return this.myeggs.indexOf(eggcode)>=0
   }
 
-  async presentToast(message) {
+  async presentToast(message, timer?: number) {
+
+    var mytime = 3000;
+
+    if (typeof timer !== 'undefined') {
+      mytime = timer;
+    }
+
     const toast = await this.toastController.create({
       message: message,
-      duration: 3000,
+      duration: mytime,
       position: 'middle',
     });
     toast.present();

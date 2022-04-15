@@ -9671,7 +9671,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         value: function addEgg(num, area) {
           if (this.myeggs.indexOf(num) >= 0) {//this.presentToast(this.allmessages.imageviewer_addegg_nok);
           } else {
-            this.presentToast(this.allmessages.imageviewer_addegg_ok);
+            this.presentToast(this.allmessages.imageviewer_addegg_ok, 1000);
             this.myeggs.push(num);
             if (this.verbose) console.log(this.myeggs);
             this.checkDone(area);
@@ -9684,25 +9684,31 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         }
       }, {
         key: "presentToast",
-        value: function presentToast(message) {
+        value: function presentToast(message, timer) {
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-            var toast;
+            var mytime, toast;
             return regeneratorRuntime.wrap(function _callee$(_context2) {
               while (1) {
                 switch (_context2.prev = _context2.next) {
                   case 0:
-                    _context2.next = 2;
+                    mytime = 3000;
+
+                    if (typeof timer !== 'undefined') {
+                      mytime = timer;
+                    }
+
+                    _context2.next = 4;
                     return this.toastController.create({
                       message: message,
-                      duration: 3000,
+                      duration: mytime,
                       position: 'middle'
                     });
 
-                  case 2:
+                  case 4:
                     toast = _context2.sent;
                     toast.present();
 
-                  case 4:
+                  case 6:
                   case "end":
                     return _context2.stop();
                 }
