@@ -1,16 +1,30 @@
 .burj {
 	position: relative;
 	width: 100%;
-	padding-bottom: 77%;
+  height: 100%;
 	vertical-align: middle;
 	margin: 0;
-	overflow: hidden;
+	overflow: auto;
+  padding:0px;
+
 }
 .burj svg { 
 	display: inline-block;
-	position: absolute;
+	position: relative;
 	top: 0; left: 0;
 }
+
+.scale1 {
+  width:100%;
+}
+.scale2 {
+  width:200%;
+}
+
+.scale3 {
+  width:300%;
+}
+
 
 $base: 0.6rem;
 

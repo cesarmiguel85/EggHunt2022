@@ -10,25 +10,35 @@
 
 <ion-content>
 
-  <figure *ngFor="let picture of pictures, index as i" class="burj">
-    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 1200" preserveAspectRatio="xMinYMin meet" >
-    <image width="1600" height="1200" [attr.xlink:href]="picture.url">
+  <figure *ngFor="let picture of pictures, index as i" class="burj" id="items-container">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 1200" preserveAspectRatio="xMinYMin meet" [ngClass]="{'scale1':  this.imagezoom===1,'scale2':  this.imagezoom===2, 'scale3': this.imagezoom===3}" (dblclick)="this.dbclicked($event)">
+    <image width="1600" height="1200" [attr.xlink:href]="picture.url" class="scale1">
     </image>
     <a  *ngFor="let rectangle of picture.rectangles" (click)="foundEgg(rectangle.code)">
-      <rect [attr.x]="rectangle.x" [attr.y]="rectangle.y" fill="transparent" opacity="20" [attr.width]="rectangle.width" [attr.height]="rectangle.height" />
-      <rect *ngIf="mydata.iHaveIt(rectangle.code)" [attr.x]="rectangle.x" [attr.y]="rectangle.y" stroke="green" stroke-width="5" fill="transparent" opacity="20" [attr.width]="rectangle.width" [attr.height]="rectangle.height" />
+      <rect [attr.x]="rectangle.x-rectangle.width/2" [attr.y]="rectangle.y-rectangle.height/2" fill="transparent" opacity="20" [attr.width]="rectangle.width" [attr.height]="rectangle.height" />
+      <rect *ngIf="mydata.iHaveIt(rectangle.code)" [attr.x]="rectangle.x-rectangle.width/2" [attr.y]="rectangle.y-rectangle.height/2" stroke="red" stroke-width="5" fill="transparent" opacity="20" [attr.width]="rectangle.width" [attr.height]="rectangle.height" />
     </a>
     </svg>
 
    
-
-    <div id="scrolldown" *ngIf="i<(pictures.length-1) && pictures.length>1">
-      <div class="containerchevron">
-        <div class="chevron"></div>
-        <div class="chevron"></div>
-        <div class="chevron"></div>
-      </div>
-    </div>
   </figure>
+
+
+  <ion-fab horizontal="start" vertical="bottom" slot="fixed">
+    <ion-fab-button color="secondary">
+      <ion-icon name="search-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="end">
+      <ion-fab-button color="light" (click)="setZoom(1)">
+        x1
+      </ion-fab-button>
+      <ion-fab-button color="light" (click)="setZoom(2)">
+        x2
+      </ion-fab-button>
+      <ion-fab-button color="light" (click)="setZoom(3)">
+        x3
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
   
 </ion-content>
